@@ -1,0 +1,22 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 500px;
+  height: 500px;
+}
+td {
+  text-align: left;
+  padding: 8px;
+  background-color: white;
+}
+th{
+  border: 1px solid #dddddd;
+  color: white;
+  background-color: black;
+}
+.le{
+  background-color: orange;
+}
+.header{
+  background-color: orange;
+}

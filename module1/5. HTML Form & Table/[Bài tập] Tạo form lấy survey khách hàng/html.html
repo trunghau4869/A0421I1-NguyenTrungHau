@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">0
+    <title>Title</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+<header>
+<h2 id="logo"> MARKET RESEARCH SURVEY</h2>
+<div>Please take a few moments to complete this satisfaction survey.</div>
+</header>
+<ul>
+    <li>
+        <div><label class="range"><b>What is your age range?</b></label></div>
+       <div> <select class="range1" onchange="handleInput(this)">
+            <option value="18-24">18-24</option>
+            <option value="25-34">25-34</option>
+            <option value="35-50">35-50</option>
+            <option value="50+">50+</option>
+        </select> </div>
+    </li><br>
+    <li><label class="range"><b>What is your yearly income range?</b></label><br>
+        <div><select class="range1" onchange="handleInput(this)">
+            <option value="$0 - $25,000">$0 - $25,000</option>
+            <option value="$25,001 - $50,000">$25,001 - $50,000</option>
+            <option value="$50,001 -  $100,000">$50,001 -  $100,000</option>
+            <option value="$100,000+">$100,000+</option>
+        </select></div> </li><br>
+    <li><label class="gender"><b>Gender Identity</b></label><br>
+        <div><input type="radio" name="gt" value="male"> Male <br>
+            <input type="radio" name="gt" value="female"> Female <br>
+            <input type="radio" name="gt" value="nonbinary"> Nonbinary <br>
+            <input type="radio" name="gt" value="other"> Other <br>
+
+        </div> </li><br>
+    <li><label class="gender"><b>Which of the following products have your purchased in the last 2 months. Please check all that apply.</b></label><br>
+        <div><input type="checkbox"  value="Product 1"> Product 1 <br>
+            <input type="checkbox"  value="Product 2"> Product 2<br>
+            <input type="checkbox"  value="Product 3"> Product 3
+            </div> </li><br>
+    <li><label class="gender"><b>How often would you use our new product?</b></label><br>
+        <div><input type="radio" name="daily" value="daily"> Daily <br>
+            <input type="radio" name="daily" value="weekly"> Weekly <br>
+            <input type="radio" name="daily" value="monthly"> Monthly <br>
+        </div> </li><br>
+    <li><label class="gender"><b>What would you pay for the new product?</b></label><br>
+        <div>
+            <span>$</span>
+            <span class="dollars"><input type="textbox"><label>dollars</label></span>
+            <span>.</span>
+            <span class="cents"><input type="textbox"><label>cents</label></span>
+        </div> </li><br>
+    <li><label class="gender"><b>What features would you like to see in the new product.</b></label><br>
+        <textarea></textarea>
+
+    </li><br>
+    <li><label>Please rate your level of agreement with the following statements.</label>
+    <table>
+        <tr>
+            <td></td>
+            <td>Strongly Disagree</td>
+            <td>Disagree</td>
+            <td>Agree</td>
+            <td>Strongly Agree</td>
+        </tr>
+        <tr>
+            <th>Our products are priced fairly</th>
+            <td><input type="radio" name="rate1">1</td>
+            <td><input type="radio" name="rate1">2</td>
+            <td><input type="radio" name="rate1">3</td>
+            <td><input type="radio" name="rate1">4</td>
+        </tr>
+        <tr>
+            <th>Our products are high quality</th>
+            <td><input type="radio" name="rate2">1</td>
+            <td><input type="radio" name="rate2">2</td>
+            <td><input type="radio" name="rate2">3</td>
+            <td><input type="radio" name="rate2">4</td>
+        </tr>
+        <tr>
+            <th>You would recommend our product to a friend or coworker</th>
+            <td><input type="radio" name="rate3">1</td>
+            <td><input type="radio" name="rate3">2</td>
+            <td><input type="radio" name="rate3">3</td>
+            <td><input type="radio" name="rate3">4</td>
+        </tr>
+    </table>
+    </li><br>
+</ul>
+<input type="submit" value="Submit">
+</body>
+</html>
