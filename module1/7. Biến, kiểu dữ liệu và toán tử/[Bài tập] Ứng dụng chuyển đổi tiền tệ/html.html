@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Amount</label>
+<input type="textbox" id="amount">
+<label>From Currenvy</label>
+<select id="fromcurrency">
+    <option>VND</option>
+    <option>USD</option>
+</select>
+<label>To Currenvy</label>
+<select id="tocurrency">
+    <option>USD</option>
+    <option>VND</option>
+</select>
+<button onclick="changeMoney()">convert</button><br>
+<p id="result"></p>
+</body>
+<script>
+    function changeMoney() {
+        let amount = parseInt(document.getElementById("amount").value);
+        let fromcurrency = document.getElementById("fromcurrency").value;
+        let tocurrency = document.getElementById("tocurrency").value;
+        let result;
+        if(fromcurrency =="VND" && tocurrency=="USD") {
+            result = "Result: " + (amount / 23000) + " USD";
+        } else if(fromcurrency == "USD"&& tocurrency=="VND") {
+            result = "Result: " + (amount * 23000) + " VND";
+        }else {
+            result="khong the chuyen doi vi chon sai gia tri!!";
+        }
+        document.getElementById("result").innerHTML=result;
+    }
+
+</script>
+</html>

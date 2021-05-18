@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Caculator</h1>
+<input type="textbox" id="soa" >
+<input type="textbox" id="sob" ><br><br>
+<button onclick="tong()">Addition(+)</button>
+<button onclick="hieu()">Subtraction(-)</button>
+<button onclick="tich()">Multiplication(*)</button>
+<button onclick="thuong()">Division(/)</button><br>
+<p id="result"></p>
+</body>
+<script>
+    function tong() {
+        var soa=parseFloat(document.getElementById("soa").value);
+        var sob=parseFloat(document.getElementById("sob").value);
+        var result;
+        result = "result :"+(soa+sob);
+        document.getElementById("result").innerHTML=result;
+    }
+    function hieu() {
+        var soa=parseFloat(document.getElementById("soa").value);
+        var sob=parseFloat(document.getElementById("sob").value);
+        var result;
+        result = "result :"+(soa-sob);
+        document.getElementById("result").innerHTML=result;
+    }
+    function tich() {
+        var soa=parseFloat(document.getElementById("soa").value);
+        var sob=parseFloat(document.getElementById("sob").value);
+        var result;
+        result = "result :"+(soa*sob);
+        document.getElementById("result").innerHTML=result;
+    }
+    function thuong() {
+        var soa=parseFloat(document.getElementById("soa").value);
+        var sob=parseFloat(document.getElementById("sob").value);
+        var result;
+        result = "result :"+(soa/sob);
+        document.getElementById("result").innerHTML=result;
+    }
+</script>
+</html>
