@@ -15,32 +15,23 @@
 <p id="result"></p>
 </body>
 <script>
+    var soa=document.getElementById("soa");
+    var sob=document.getElementById("sob");
     function tong() {
-        var soa=parseFloat(document.getElementById("soa").value);
-        var sob=parseFloat(document.getElementById("sob").value);
-        var result;
-        result = "result :"+(soa+sob);
+
+        var result = parseFloat(soa.value)+parseFloat(sob.value);
         document.getElementById("result").innerHTML=result;
     }
     function hieu() {
-        var soa=parseFloat(document.getElementById("soa").value);
-        var sob=parseFloat(document.getElementById("sob").value);
-        var result;
-        result = "result :"+(soa-sob);
+        var result = parseFloat(soa.value)-parseFloat(sob.value);
         document.getElementById("result").innerHTML=result;
     }
     function tich() {
-        var soa=parseFloat(document.getElementById("soa").value);
-        var sob=parseFloat(document.getElementById("sob").value);
-        var result;
-        result = "result :"+(soa*sob);
+        var result = parseFloat(soa.value)*parseFloat(sob.value);
         document.getElementById("result").innerHTML=result;
     }
     function thuong() {
-        var soa=parseFloat(document.getElementById("soa").value);
-        var sob=parseFloat(document.getElementById("sob").value);
-        var result;
-        result = "result :"+(soa/sob);
+        var result = parseFloat(soa.value)/parseFloat(sob.value);
         document.getElementById("result").innerHTML=result;
     }
 </script>

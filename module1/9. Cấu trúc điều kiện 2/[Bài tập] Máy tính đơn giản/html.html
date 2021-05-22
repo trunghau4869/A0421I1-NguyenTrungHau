@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form name="mt">
+<table>
+   <tr>
+       <td colspan="4"><input type="text" id="text"></td>
+   </tr>
+    <tr>
+        <td><input type=" button" name="one" value="1" onclick="mt.text.value+=1"></td>
+        <td><input type=" button" name="two" value="2" onclick="mt.text.value+=2"></td>
+        <td><input type=" button" name="three" value="3" onclick="mt.text.value+=3"></td>
+        <td><input type=" button" name="plus" value="+" onclick="mt.text.value+='+'"></td>
+    </tr>
+    <tr>
+        <td><input type=" button" name="four" value="4" onclick="mt.text.value+=4"></td>
+        <td><input type=" button" name="five" value="5" onclick="mt.text.value+=5"></td>
+        <td><input type=" button" name="six" value="6" onclick="mt.text.value+=6"></td>
+        <td><input type=" button" name="" value="-" onclick="mt.text.value+='-'"></td>
+    </tr>
+    <tr>
+        <td><input type=" button" name="seven" value="7" onclick="mt.text.value+=7"></td>
+        <td><input type=" button" name="eight" value="8" onclick="mt.text.value+=8"></td>
+        <td><input type=" button" name="nice" value="9" onclick="mt.text.value+=9"></td>
+        <td><input type=" button" name="one" value="*" onclick="mt.text.value+='*'"></td>
+    </tr>
+    <tr>
+        <td><input type=" button" name="clear" id="clear" value="C" onclick="mt.text.value=''"></td>
+        <td><input type=" button" name="two" value="0" onclick="mt.text.value+=0"></td>
+        <td><input type=" button" name="three" value="=" onclick="mt.text.value =eval(mt.text.value)"></td>
+        <td><input type=" button" name="one" value="+" onclick="mt.text.value+='/'"></td>
+    </tr>
+</table>
+</form>
+</body>
+</html>
