@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let phi;
+    let tb=25000;//so tien thue bao phai tra hang thang
+    let tg=parseFloat(prompt("nhap so thoi luong goi dien thoai cua ban : "))
+    if(tg <= 50){
+        phi=600*tg+tb;
+        alert("phi thue bao cua ban la : "+ phi )
+        //phi la 600 dong cho 50 phut dau tien
+    }else if(tg <= 200){
+        phi=(600*50)+((tg-50)*400)+tb;
+        alert("phi thue bao cua ban la : "+ phi )
+        //phi la 400 dong cho 150 phut tiep theo
+    }else{
+        phi=(600*50)+(400*150)+((tg-200)*200)+tb;
+        alert("phi thue bao cua ban la : "+ phi )
+        //phi la 200 dong cho bat ki phut nao sau 200 phut dau tien
+    }
+</script>
+</body>
+</html>

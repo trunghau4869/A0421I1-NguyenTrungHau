@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let diemkt=parseFloat(prompt("nhap diem kiem tra : "))
+    let diemgk=parseFloat(prompt("nhap diem giua ki : "))
+    let diemck=parseFloat(prompt("nhap diem cuoi ki : "))
+    let hocluc;
+    diemck=(55/10)*diemck
+    diemgk=(25/10)*diemgk
+    diemkt=(20/10)*diemkt
+    hocluc=diemkt+diemgk+diemck
+    if(hocluc>=80){
+        alert("hoc luc gioi")
+    }else if(hocluc>=65){
+        alert("hoc luc kha")
+    }else if(hocluc>=35) {
+        alert("hoc luc Trung binh")
+    }else if(hocluc>=50) {
+        alert("hoc luc Trung binh")
+    }else{
+        alert("hoc luc Kem")
+    }
+
+
+</script>
+</body>
+</html>

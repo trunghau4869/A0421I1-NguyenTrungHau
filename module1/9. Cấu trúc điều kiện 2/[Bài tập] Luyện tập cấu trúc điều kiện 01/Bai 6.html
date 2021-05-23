@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let ds=parseFloat(prompt("nhap tong doanh so cua ban : "));
+    let hh;
+    if(ds <= 100000000){
+        hh=(ds/100)*5
+        alert("so tien hoa hong ban nhan duoc la : "+hh)
+        //doanh so dat nho hon hoac bang 100,000,000 thi la 5%
+    }else if(ds <= 300000000) {
+        hh = (ds / 100) * 10
+        alert("so tien hoa hong ban nhan duoc la : " + hh)
+        //doanh so dat nho hon hoac bang 300,000,000 thi la 10%
+    }else {
+        hh = (ds / 100) * 20
+        alert("so tien hoa hong ban nhan duoc la : " + hh)
+        //doanh so dat lon hon  300,000,000 thi la 20%
+    }
+</script>
+</body>
+</html>

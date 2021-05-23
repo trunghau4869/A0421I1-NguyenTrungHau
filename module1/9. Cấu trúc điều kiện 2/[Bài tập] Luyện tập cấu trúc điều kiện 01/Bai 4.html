@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=parseInt(prompt("nhap vao so nguyen a : "));
+    let b=parseInt(prompt("nhap vao so nguyen b : "));
+    let c=parseInt(prompt("nhap vao so nguyen c : "));
+    let max;
+    if(a >= b){
+        if(a >= c){
+            max=a;
+            alert("so lon nhat la "+max)
+        }else{
+            max=c;
+            alert("so lon nhat la "+max)
+        }
+    }else{
+        if(b >= c){
+            max=b;
+            alert("so lon nhat la "+max)
+        }else{
+            max=c;
+            alert("so lon nhat la "+max)
+        }
+    }
+</script>
+</body>
+</html>
