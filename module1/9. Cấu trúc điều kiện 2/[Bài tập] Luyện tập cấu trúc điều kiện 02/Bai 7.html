@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a =parseFloat(prompt("nhap a"))
+    let b =parseFloat(prompt("nhap b"))
+    let c =parseFloat(prompt("nhap c"))
+    let delta=(b*b)-4*a*c
+    let x1,x2
+    if(delta<0){
+        alert("phuong trinh vo nghiem")
+    }else if(delta=0){
+        x1=x2=-b/(2*a)
+        alert("phuong trinh co nghiem kep la x1=x2= "+ x1 )
+    }else{
+        x1=(-b+Math.sqrt(delta))/(2*a)
+        x2=(-b-Math.sqrt(delta))/(2*a)
+        document.write("phuong trinh co 2 nghiem  x1 = "+ x1 )
+        document.write(" va nghiem x2 = "+ x2)
+    }
+</script>
+
+</body>
+</html>
