@@ -6,13 +6,24 @@
 </head>
 <body>
 <script>
-    let a=5;
+    var  a=parseInt(prompt());
 
-    let dau;
-    for(let i=0;i<=a;i++){
+    var dau='';
+    for(var i=0;i<=a;i++){
         dau +='*';
         document.write(dau+"<br>")
     }
+    document.write("-----------------------<br>");
+   var cuoi='';
+  //  for(var i=0;i<=a;i++){
+
+        for (var i=a;i>0;i--)
+        {
+            for (let j=1;j<=i;j++){
+            cuoi +=  '*';
+        document.write(cuoi+"<br>")
+    }}
+
 
 </script>
 </body>

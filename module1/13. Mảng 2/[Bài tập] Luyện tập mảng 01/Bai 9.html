@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrA = [];
+    let n=10
+    for(let i=0;i<n;i++){
+        arrA[i]=prompt("nhap  phan tu thu "+ i +" cua mang A:")
+    }
+    let arrB=[]
+    for(let j=0;j<n;j++){
+       arrB[j]=prompt("nhap  phan tu thu "+ j +" cua mang B:")
+    }
+    let arrC=arrA.concat(arrB)
+    document.writeln(arrC)
+</script>
+</body>
+</html>

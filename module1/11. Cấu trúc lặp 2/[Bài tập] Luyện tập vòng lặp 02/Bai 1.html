@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n=0;
+    let n1=1;
+    let n2=1;
+    let result='';
+    let k=parseInt(prompt())
+    for(let j=0;j<k;j++){
+        if(k<0){
+            result =-1+'-'
+        }else if(k==0||k==1){
+            result =k+'-';
+        }else{
+            for (let i = 2; i < k; i++) {
+                n=n1;
+                n1=n2;
+                n2=n+n1;
+            }
+        result =n2+'-';
+        }
+    }
+    document.write(result)
+
+
+</script>
+</body>
+</html>

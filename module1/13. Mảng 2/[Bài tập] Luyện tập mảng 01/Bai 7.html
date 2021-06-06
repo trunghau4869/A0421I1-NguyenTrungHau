@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = [];
+    let n=10
+    for(let i=0;i<n;i++){
+        num[i]=prompt("nhap  phan tu thu "+ i +" :")
+    }
+    for(let i=0;i<n;i++) {
+        if (num[i] === "V" || num[i] === "v") {
+            num.splice(i, 1);
+            i--;
+            num.push(0);
+        }
+    }
+    document.writeln(num);
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let chuoi = "Nhap vào chuoi can chuyen đoi ";
+
+    let result= '';
+    for(let i=0;i<chuoi.length;i++){
+        if(chuoi[i]>='a' && chuoi[i]<='z'){
+            result +=chuoi[i].toLocaleUpperCase();
+        }else if( chuoi[i]>='A' && chuoi[i]<='Z'){
+            result +=chuoi[i].toLocaleLowerCase();
+        }else{
+            result +=chuoi[i];
+        }
+    }
+    document.write(result);
+</script>
+</body>
+</html>
