@@ -7,12 +7,30 @@
 <body>
 
 <SCRIPT>
-    let a=parseInt(prompt("nhap so bat ki"))
-    if(a/2==0 && a/a==1){
-        alert("a la so nguyen to")
-    }else {
-        alert("a khong phai la so nguyen to")
+   // let n=parseInt(prompt("nhap so luong so nguyen to can in :"))
+    let count=0;
+    let countPrime=0;
+    for(let j=0;j<20;j++) {
+        for (let k = 0; k <= 100; k++) {
+            if (k < 2) {
+                continue;
+            } else {
+                for (let i = 2; i <= Math.sqrt(k); i++) {
+                    if (k % i == 0) {
+                        count++;
+                    }
+                }
+                if (count == 0) {
+                    countPrime++;
+                    document.writeln(k + "-")
+
+                }
+            }
+        }
     }
+
+
+
 </SCRIPT>
 </body>
 </html>

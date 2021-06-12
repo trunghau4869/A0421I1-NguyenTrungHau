@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    alert(findMin())
+    function findMin() {
+        var a = parseInt(prompt("nhap so a bat ki : "))
+        var b = parseInt(prompt("nhap so b bat ki : "))
+        var c = parseInt(prompt("nhap so c bat ki : "))
+        var min = a;
+        if (min >= b) {
+            min = b
+            if(min>=c){
+                min=c;
+                return "min = "+min;
+            }else {
+                min=b;
+                return "min = "+min;
+            }
+        }else{
+            min=a;
+            return "min ="+min;
+        }
+
+    }
+</script>
+</body>
+</html>

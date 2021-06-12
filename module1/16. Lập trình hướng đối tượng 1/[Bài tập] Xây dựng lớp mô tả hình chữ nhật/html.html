@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;">
+<script>
+    class Hinhchunhat {
+        constructor(chieudai, chieurong) {
+            this.chieudai = chieudai;
+            this.chieurong = chieurong;
+        }
+        tinhchuvi() {
+           return (this.chieudai * this.chieurong) * 2
+        }
+        tinhdientich() {
+            return (this.chieudai * this.chieurong)
+        }
+        veHinhchunhat() {
+            var canvas = document.getElementById("myCanvas");
+            let ve=canvas.getContext("2d")
+            ve.stroke();
+            ve.fillRect(10,10,this.chieurong, this.chieudai);
+            var grd = canvas.createLinearGradient(0, 0, 200, 0);
+            grd.addColorStop(0.25, "red");
+            grd.addColorStop(0.5, "blue");
+        }
+    }
+    let product=new Hinhchunhat(100,200)
+    document.writeln(product.veHinhchunhat());
+    document.writeln(product.tinhdientich());
+    document.writeln(product.tinhchuvi());
+</script>
+</body>
+</html>

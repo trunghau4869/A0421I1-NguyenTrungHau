@@ -17,7 +17,8 @@
     <option>USD</option>
     <option>VND</option>
 </select>
-<button onclick="changeMoney()">convert</button><br>
+<button onclick="changeMoney()">convert</button>
+<br>
 <p id="result"></p>
 </body>
 <script>
@@ -26,14 +27,14 @@
         let fromcurrency = document.getElementById("fromcurrency").value;
         let tocurrency = document.getElementById("tocurrency").value;
         let result;
-        if(fromcurrency =="VND" && tocurrency=="USD") {
+        if (fromcurrency == "VND" && tocurrency == "USD") {
             result = "Result: " + (amount / 23000) + " USD";
-        } else if(fromcurrency == "USD"&& tocurrency=="VND") {
+        } else if (fromcurrency == "USD" && tocurrency == "VND") {
             result = "Result: " + (amount * 23000) + " VND";
-        }else {
-            result="khong the chuyen doi vi chon sai gia tri!!";
+        } else {
+            result = "khong the chuyen doi vi chon sai gia tri!!";
         }
-        document.getElementById("result").innerHTML=result;
+        document.getElementById("result").innerHTML = result;
     }
 
 </script>

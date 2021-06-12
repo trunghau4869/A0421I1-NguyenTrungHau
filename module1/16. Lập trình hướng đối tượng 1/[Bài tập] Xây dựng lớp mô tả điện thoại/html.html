@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Mobile {
+        constructor(pin, tinNhanDangSoan, tinNhanDen, tinNhanGui) {
+            this.pin = pin;
+            this.tinNhanDangSoan = tinNhanDangSoan;
+            this.tinNhanDen = tinNhanDen;
+            this.tinNhanGui = tinNhanGui;
+        }
+
+        trangThaiPin() {
+            this.pin;
+            if (product.batDT()) {
+                return this.pin - 1;
+            } else if (product.batDT()) {
+                return this.pin - 1;
+            } else if (product.tatDT()) {
+                return this.pin - 1;
+            } else if (product.xacPin()) {
+                return this.pin - 1;
+            } else if (product.soanTin()) {
+                return this.pin - 1;
+            } else if (product.nhanTin()) {
+                return this.pin - 1;
+            } else if (product.guiTin()) {
+                return this.pin - 1;
+            } else if (product.xemTinDen()) {
+                return this.pin - 1;
+            } else if (product.xemTinDi()) {
+                return this.pin - 1;
+            } else {
+                return this.pin;
+            }
+        }
+
+        batDT() {
+            return "bat DT"
+        }
+
+        tatDT() {
+            return "tat DT"
+        }
+
+        xacPin() {
+            return "dang xac ";
+        }
+
+        soanTin() {
+            return "dang soan tin";
+        }
+
+        nhanTin() {
+            return "nhan tin";
+        }
+
+        guiTin() {
+            return "gui tin";
+        }
+
+        xemTinDen() {
+            return "xem tin nhan den";
+        }
+
+        xemTinDi() {
+            return "xem tin nhan di";
+        }
+
+
+    }
+
+    let product = new Mobile(100, "Hau oi", "alo", "nghe ne");
+    // document.writeln(product.xacPin());
+    alert(product.pin)
+    alert(product.trangThaiPin())
+     document.writeln(product.batDT());
+    document.writeln(product.tatDT());
+    alert(product.trangThaiPin())
+    alert(product.pin)
+    //  alert(product.trangThaiPin())
+    //
+    // alert(product.tinNhanDangSoan)
+    // alert(product.tinNhanDen)
+    // alert(product.tinNhanGui)
+
+
+</script>
+</body>
+</html>
