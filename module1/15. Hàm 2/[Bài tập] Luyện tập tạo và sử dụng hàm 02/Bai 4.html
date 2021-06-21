@@ -6,9 +6,10 @@
 </head>
 <body>
 <script>
-    let num=prompt("nhap vao 1 ki tu bat ki :")
+
     alert(kiemtra())
-    function kiemtra() {
+    function kiemtra(num) {
+        num=prompt("nhap vao 1 ki tu bat ki :")
         if(isNaN(num)){
             return "false";
         }else {

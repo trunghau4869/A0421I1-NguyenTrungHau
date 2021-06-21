@@ -6,9 +6,10 @@
 </head>
 <body>
     <script>
-        let num=parseInt(prompt("nhap 1 so nguyen : "))
+
         alert(tinhgiaithua())
-        function tinhgiaithua() {
+        function tinhgiaithua(num) {
+            num=parseInt(prompt("nhap 1 so nguyen : "))
             let giaithua=1
            for(let i=1;i<=num;i++){
                giaithua *=i;

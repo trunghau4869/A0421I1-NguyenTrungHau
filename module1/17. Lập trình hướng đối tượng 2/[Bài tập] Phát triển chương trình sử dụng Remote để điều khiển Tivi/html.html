@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class dieukhien{
+        constructor(ma){
+            this.ma=ma;
+        }
+        chuyenKenh(kenh){
+            tivi.kenhHienTai=kenh;
+            return tivi.kenhHienTai=kenh;
+
+        }
+        amLuong(){}
+
+    }
+    class tivi{
+        constructor(kenhHienTai,amLuong,trangThai){
+            this.kenhHienTai=kenhHienTai;
+            this.amLuong=amLuong;
+            this.trangThai=trangThai;
+        }
+        dieuKhienChuyenKenh(){}
+        dieuKhienAmLuong(){}
+    }
+    let Tivi =new tivi(7,50,"Bat")
+    let Dieukhien =new dieukhien("01")
+    alert(Tivi.kenhHienTai)
+    alert(Tivi.trangThai)
+    alert(Dieukhien.chuyenKenh(5))
+    alert(Tivi.kenhHienTai)
+
+</script>
+</body>
+</html>

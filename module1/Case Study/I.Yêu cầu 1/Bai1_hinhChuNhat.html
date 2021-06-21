@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let x = parseInt(prompt())
+    let y = parseInt(prompt())
+    let result = '';
+    for (let i = 1; i <= x; i++) {
+        for (let j = 1; j <= y; j++) {
+            if (i == 1 || i == x || j == 1 || j == y) {
+                result += "* ";
+            } else {
+                result += "&nbsp;&nbsp;&nbsp;";
+            }
+        }
+        result += "<br>";
+    }
+    document.writeln(result)
+
+
+</script>
+</body>
+</html>

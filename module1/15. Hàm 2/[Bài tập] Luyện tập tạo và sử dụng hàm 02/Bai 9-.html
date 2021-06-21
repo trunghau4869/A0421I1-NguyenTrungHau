@@ -8,17 +8,17 @@
 <script>
     alert(soSachKiTu())
 
-    function soSachKiTu() {
-        let n = parseInt(prompt("nhap so phan tu trong mang :"))
+    function soSachKiTu(n) {
+         n = parseInt(prompt("nhap so phan tu trong mang :"))
 
         let arr = [];
         for (let i = 0; i < n; i++) {
             arr[i] = prompt("nhap phan tu thu " + i + ":")
         }
-        let kitu = prompt("nhap 1 ki tu bat ki");
+         var kiTu = prompt("nhap 1 ki tu bat ki");
         let dem = 0;
         for (let i = 0; i < n; i++) {
-            if (kitu == "arr[i]") {
+            if (kiTu == "arr[i]") {
                 dem++;
                 i++;
             }else {
@@ -26,7 +26,7 @@
             }
         }
         if (dem > 0) {
-            return "so lan xuat hien cua " + kitu + "trong mang la : " + dem;
+            return "so lan xuat hien cua " + kiTu + "trong mang la : " + dem;
         } else {
             return -1
         }

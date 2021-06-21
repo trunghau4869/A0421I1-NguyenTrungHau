@@ -5,15 +5,22 @@
     <title>Title</title>
 </head>
 <body>
-    <script>
+<script>
+    function footToMeter(foot) {
+        var foot = parseFloat(prompt("nhap vao foot : "));
+        var meter = 0.305 * foot;
+        return meter;
+    }
 
-        alert(foot)
+    function meterToFoot(meter) {
+        var meter = parseFloat(prompt("nhap vao meter : "));
+         var foot = 3.279 * meter;
+        return foot;
+    }
 
-        function footToMeter(foot){
-            meter = 0.305 * 2
-            return meter;
-        }
 
-    </script>
+    alert( " foot sau khi chuyen sang meter la : " + footToMeter());
+    alert(" meter sau khi chuyen sang foot la : " + meterToFoot());
+</script>
 </body>
 </html>

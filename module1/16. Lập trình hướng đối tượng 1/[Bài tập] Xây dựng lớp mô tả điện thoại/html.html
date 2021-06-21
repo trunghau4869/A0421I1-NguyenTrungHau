@@ -15,25 +15,24 @@
         }
 
         trangThaiPin() {
-            this.pin;
             if (product.batDT()) {
-                return this.pin - 1;
+                return this.pin--;
             } else if (product.batDT()) {
-                return this.pin - 1;
+                return this.pin--;
             } else if (product.tatDT()) {
-                return this.pin - 1;
+                return this.pin--;
             } else if (product.xacPin()) {
-                return this.pin - 1;
+                return this.pin--;
             } else if (product.soanTin()) {
-                return this.pin - 1;
+                return this.pin--;
             } else if (product.nhanTin()) {
-                return this.pin - 1;
+                return this.pin--;
             } else if (product.guiTin()) {
-                return this.pin - 1;
+                return this.pin--;
             } else if (product.xemTinDen()) {
-                return this.pin - 1;
+                return this.pin--;
             } else if (product.xemTinDi()) {
-                return this.pin - 1;
+                return this.pin-- ;
             } else {
                 return this.pin;
             }
@@ -75,18 +74,18 @@
     }
 
     let product = new Mobile(100, "Hau oi", "alo", "nghe ne");
-    // document.writeln(product.xacPin());
-    alert(product.pin)
-    alert(product.trangThaiPin())
-     document.writeln(product.batDT());
-    document.writeln(product.tatDT());
-    alert(product.trangThaiPin())
-    alert(product.pin)
-    //  alert(product.trangThaiPin())
-    //
-    // alert(product.tinNhanDangSoan)
-    // alert(product.tinNhanDen)
-    // alert(product.tinNhanGui)
+    // alert(product.trangThaiPin())
+    // alert(product.batDT());
+    // alert(product.trangThaiPin())
+    // alert(product.tatDT());
+    // alert(product.trangThaiPin())
+    let nokia= new Mobile(100,"gui tin cho iphone","hello","hi");
+    let iphone=new Mobile(100,"gui tin cho nokia","hello","hi");
+    alert(nokia.guiTin(iphone))
+
+
+
+
 
 
 </script>

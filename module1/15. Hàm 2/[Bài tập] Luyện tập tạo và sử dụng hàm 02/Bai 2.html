@@ -6,14 +6,17 @@
 </head>
 <body>
 <script>
-    let r=parseFloat(prompt("nhap vao ban kinh hinh tron : "))
-    document.writeln("dien tich hinh tron la :"+ tinhS()+"<br>"+"chu vi hinh tron la : "+ tinhC())
-    function tinhS() {
+
+
+    function tinhS(r) {
+        r=parseFloat(prompt("nhap vao ban kinh hinh tron : "))
         return (r*r)*(Math.PI)
     }
-    function tinhC() {
+    function tinhC(r) {
+        r=parseFloat(prompt("nhap vao ban kinh hinh tron : "))
         return r*2*Math.PI
     }
+    document.writeln("dien tich hinh tron la :"+ tinhS()+"<br>"+"chu vi hinh tron la : "+ tinhC())
 </script>
 </body>
 </html>

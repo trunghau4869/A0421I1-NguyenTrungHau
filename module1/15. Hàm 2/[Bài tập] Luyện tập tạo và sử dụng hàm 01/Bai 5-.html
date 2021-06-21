@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = ["Polaris", " Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+    let arr2 = ["Ursa Minor", " Tarurus", "Cygnus", "Lyra", " Aquila", " Ursa Major ", "Leo"]
+    function nhan(kiTu) {
+        kiTu = prompt()
+        for (let i = 0; i <= arr1.length; i++) {
+                if (kiTu === arr1[i]) {
+                    return arr2[i]
+                }else {
+                    return "khong tim thay"
+                    continue;
+                }
+        }
+    }
+    alert(nhan())
+</script>
+</body>
+</html>

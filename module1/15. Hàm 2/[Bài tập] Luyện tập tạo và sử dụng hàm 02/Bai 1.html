@@ -6,12 +6,14 @@
 </head>
 <body>
 <script>
-    let num=parseFloat(prompt("nhap 1 so bat ki : "))
-    alert("binh phương cua "+ num +" la "+tinhbinhphuong())
-    function tinhbinhphuong() {
+
+
+    function tinhbinhphuong(num) {
+        var  num=parseFloat(prompt("nhap 1 so bat ki : "))
         return num*num
 
     }
+    alert("binh phương cua la "+tinhbinhphuong())
 </script>
 </body>
 </html>
