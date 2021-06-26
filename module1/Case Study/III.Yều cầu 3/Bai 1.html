@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("nhap so luong so nguyen :"))
+    let arrA = [];
+    for (let i = 0; i < n; i++) {
+        arrA[i] = parseInt(prompt("nhap so thu " + i))
+    }
+    let arrB = [];
+    let sum=0;
+    for (let i = 0; i < n; i++) {
+        sum+= arrA[i]
+        arrB.push(sum)
+
+    }
+    document.writeln(arrA + "<br>")
+    document.writeln(arrB)
+</script>
+</body>
+</html>

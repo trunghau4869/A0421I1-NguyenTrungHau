@@ -7,19 +7,20 @@
 <body>
 <script>
     let arr1 = ["Polaris", " Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
-    let arr2 = ["Ursa Minor", " Tarurus", "Cygnus", "Lyra", " Aquila", " Ursa Major ", "Leo"]
+    let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", " Aquila", " Ursa Major ", "Leo"]
+
     function nhan(kiTu) {
-        kiTu = prompt()
+
         for (let i = 0; i <= arr1.length; i++) {
-                if (kiTu === arr1[i]) {
-                    return arr2[i]
-                }else {
-                    return "khong tim thay"
-                    continue;
-                }
+            if (kiTu === arr1[i]) {
+                return arr2[i]
+            }
         }
+        return "khong tim thay";
+
     }
-    alert(nhan())
+      let kiTu = prompt()
+    alert(nhan(kiTu))
 </script>
 </body>
 </html>

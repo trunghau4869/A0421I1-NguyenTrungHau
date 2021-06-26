@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let luong=parseFloat(prompt())
+    let thue;
+
+    if(luong<=7000000){
+        thue=(luong/100)*5
+        alert("tien thue la " +thue);
+    }else if(luong>7000000||luong<15000000){
+        thue=(luong/100)*10
+        alert("tien thue la " +thue);
+    }else {
+        thue=(luong/100)*20
+        alert("tien thue la " +thue);
+    }
+    let luongRong=luong-thue;
+    alert("tien luong rong la " +luongRong)
+</script>
+</body>
+</html>

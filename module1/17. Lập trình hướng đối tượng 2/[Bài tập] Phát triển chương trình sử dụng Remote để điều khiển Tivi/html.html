@@ -6,33 +6,82 @@
 </head>
 <body>
 <script>
-    class dieukhien{
-        constructor(ma){
-            this.ma=ma;
+    class dieukhien {
+        constructor(ma) {
+            this.ma = ma;
         }
-        chuyenKenh(kenh){
-            tivi.kenhHienTai=kenh;
-            return tivi.kenhHienTai=kenh;
+        batTat(luaChon){
+            if(luaChon==="bat"){
+                if(Tivi.trangThai==="bat"){
+                    alert("tivi dang bat");
+                }else {
+                    return Tivi.trangThai="bat";
+                }
+            }else {
+                return Tivi.trangThai="tat";
+            }
+        }
+        chuyenKenh(kenh) {
+
+            return Tivi.kenhHienTai = kenh;
 
         }
-        amLuong(){}
 
-    }
-    class tivi{
-        constructor(kenhHienTai,amLuong,trangThai){
-            this.kenhHienTai=kenhHienTai;
-            this.amLuong=amLuong;
-            this.trangThai=trangThai;
+        amLuong(luachon) {
+            if (luachon === "tang") {
+                if (Tivi.amLuongHienTai > 100) {
+                    alert("am luong dang bat toi da");
+                } else {
+                    return Tivi.amLuongHienTai++;
+                }
+            } else {
+                return Tivi.amLuongHienTai--;
+            }
         }
-        dieuKhienChuyenKenh(){}
-        dieuKhienAmLuong(){}
     }
-    let Tivi =new tivi(7,50,"Bat")
-    let Dieukhien =new dieukhien("01")
-    alert(Tivi.kenhHienTai)
+
+    class tivi {
+        constructor(kenhHienTai, amLuongHienTai, trangThai) {
+            this.kenhHienTai = kenhHienTai;
+            this.amLuongHienTai = amLuongHienTai;
+            this.trangThai = trangThai;
+        }
+
+        dieuKhienChuyenKenh(kenh) {
+            return Tivi.kenhHienTai = kenh;
+        }
+
+        dieuKhienAmLuong(luachon) {
+            if (luachon === "tang") {
+                if (Tivi.amLuongHienTai > 100) {
+                    alert("am luong dang bat toi da");
+                } else {
+                    return Tivi.amLuongHienTai++
+                }
+
+            } else {
+                return Tivi.amLuongHienTai--;
+            }
+
+        }
+    }
+
+    let Tivi = new tivi(1, 50, "bat")
+    let Dieukhien = new dieukhien("01")
     alert(Tivi.trangThai)
-    alert(Dieukhien.chuyenKenh(5))
     alert(Tivi.kenhHienTai)
+    Tivi.dieuKhienChuyenKenh(7)
+    alert(Tivi.kenhHienTai)
+    Dieukhien.chuyenKenh(3)
+    alert(Tivi.kenhHienTai)
+    alert(Tivi.amLuongHienTai)
+    Tivi.dieuKhienAmLuong("tang")
+    Tivi.dieuKhienAmLuong("tang")
+    alert(Tivi.amLuongHienTai)
+    Dieukhien.batTat("tat")
+    alert(Tivi.trangThai)
+
+
 
 </script>
 </body>

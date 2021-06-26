@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Chuot {
+        constructor(ten, khonLuong, tocDo, trangThai) {
+            this.ten = ten;
+            this.khoiLuong = khonLuong;
+            this.tocDo = tocDo;
+            this.trangThai = trangThai;
+        }
+
+        hanhVi() {
+            return "chit chit chit!!";
+        }
+    }
+
+    class Meo {
+        constructor(ten, khoiLuong, tocDoToiDa, luongChuotBiBat) {
+            this.ten = ten;
+            this.khoiLuong = khoiLuong;
+            this.tocDoToiDa = tocDoToiDa;
+            this.luongChuotBiBat = luongChuotBiBat;
+        }
+
+        hanhVi() {
+            return "meo meo meo!!";
+        }
+
+        batChuot(jerry) {
+            if (tom.tocDoToiDa > jerry.tocDo) {
+                tom.luongChuotBiBat++;
+                alert(tom.ten+" da bat duoc chuot");
+            } else {
+                alert(tom.ten+" khong bat duoc chuot");
+            }
+        }
+
+        anThit(jerry) {
+            if (tom.luongChuotBiBat > 0) {
+                if (jerry.trangThai === "song") {
+                    jerry.trangThai = "chet";
+                    tom.luongChuotBiBat--;
+                    tom.khoiLuong += jerry.khoiLuong;
+                    jerry.khoiLuong = 0;
+                    alert(jerry.ten + " da bi an thit");
+                } else {
+                    alert(jerry.ten + " da chet khong an duoc");
+                }
+            }
+        }
+    }
+
+    let tom = new Meo("tom", 5, 20, 0)
+    let jerry = new Chuot("jerry", 2, 15, "song")
+    alert(jerry.ten)
+    alert(jerry.trangThai)
+    alert(jerry.hanhVi())
+    alert(tom.ten)
+    alert(tom.khoiLuong)
+    alert(tom.hanhVi())
+    tom.batChuot(jerry)
+    alert(jerry.hanhVi())
+    tom.anThit(jerry)
+    alert(jerry.trangThai)
+    alert(tom.khoiLuong)
+
+
+</script>
+</body>
+</html>

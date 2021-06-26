@@ -9,16 +9,16 @@
 <button type="button" onclick="convert()">convert</button>
 <script>
     function convert() {
-        let camelCase = document.getElementById("camelCase").innerHTML = value;
+        let camelCase = document.getElementById("camelCase").value;
         let tiengViet = ["mot ,hai,ba"]
         let tiengAnh = ["one ,two,three"]
         for (let i = 0; i < tiengViet.length; i++) {
             if (camelCase === tiengViet[i]) {
-                alert(tiengAnh[i]);
+                return tiengAnh[i];
             } else if (camelCase === tiengAnh[i]) {
-                alert(tiengViet[i]);
+                return tiengViet[i];
             } else {
-                alert("khong dich duoc");
+               return "khong dich duoc";
             }
         }
     }
