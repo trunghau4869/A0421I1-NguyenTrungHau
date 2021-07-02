@@ -7,20 +7,21 @@
 <body>
 <script>
     function footToMeter(foot) {
-        var foot = parseFloat(prompt("nhap vao foot : "));
+
         var meter = 0.305 * foot;
         return meter;
     }
 
     function meterToFoot(meter) {
-        var meter = parseFloat(prompt("nhap vao meter : "));
+
          var foot = 3.279 * meter;
         return foot;
     }
 
-
-    alert( " foot sau khi chuyen sang meter la : " + footToMeter());
-    alert(" meter sau khi chuyen sang foot la : " + meterToFoot());
+    let foot=footToMeter(5)
+    let meter=meterToFoot(5)
+    alert( " foot sau khi chuyen sang meter la : " + foot);
+    alert(" meter sau khi chuyen sang foot la : " + meter);
 </script>
 </body>
 </html>

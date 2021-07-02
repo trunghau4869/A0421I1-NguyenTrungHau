@@ -32,20 +32,20 @@
         }
 
         batChuot(jerry) {
-            if (tom.tocDoToiDa > jerry.tocDo) {
-                tom.luongChuotBiBat++;
-                alert(tom.ten+" da bat duoc chuot");
+            if (this.tocDoToiDa > jerry.tocDo) {
+                this.luongChuotBiBat++;
+                alert(this.ten+" da bat duoc chuot");
             } else {
-                alert(tom.ten+" khong bat duoc chuot");
+                alert(this.ten+" khong bat duoc chuot");
             }
         }
 
         anThit(jerry) {
-            if (tom.luongChuotBiBat > 0) {
+            if (this.luongChuotBiBat > 0) {
                 if (jerry.trangThai === "song") {
                     jerry.trangThai = "chet";
-                    tom.luongChuotBiBat--;
-                    tom.khoiLuong += jerry.khoiLuong;
+                    this.luongChuotBiBat--;
+                    this.khoiLuong += jerry.khoiLuong;
                     jerry.khoiLuong = 0;
                     alert(jerry.ten + " da bi an thit");
                 } else {

@@ -6,9 +6,10 @@
 </head>
 <body>
     <script>
-        alert(soNguyenDuong())
-        function soNguyenDuong(num) {
-             num=parseInt(prompt("nhap vao 1 so bat ki : "))
+        let num=SoNguyenDuong(parseInt(prompt("nhap vao 1 so bat ki : ")))
+        alert(num)
+        function SoNguyenDuong(num) {
+
             if(num<0){
                 return "false";
             }else {

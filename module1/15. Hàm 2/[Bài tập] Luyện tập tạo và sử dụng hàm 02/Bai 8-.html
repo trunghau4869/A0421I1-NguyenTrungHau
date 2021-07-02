@@ -6,10 +6,11 @@
 </head>
 <body>
 <script>
-    alert(hamDaoNguoc())
+    let n = HamDaoNguoc(parseInt(prompt("nhap so phan tu trong mang :")))
+    alert(n)
 
-    function hamDaoNguoc(n) {
-         n = parseInt(prompt("nhap so phan tu trong mang :"))
+    function HamDaoNguoc(n) {
+
 
         let arr = [];
         for (let i = 0; i < n; i++) {

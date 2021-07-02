@@ -6,15 +6,14 @@
 </head>
 <body>
     <script>
-
-        alert(tinhgiaithua())
-        function tinhgiaithua(num) {
-            num=parseInt(prompt("nhap 1 so nguyen : "))
-            let giaithua=1
+        let num=TinhGiaiThua(parseInt(prompt("nhap so bat ki : ")))
+        alert(num)
+        function TinhGiaiThua(num) {
+            let giaiThua=1
            for(let i=1;i<=num;i++){
-               giaithua *=i;
+               giaiThua *=i;
            }
-            return giaithua;
+            return giaiThua;
         }
     </script>
 </body>

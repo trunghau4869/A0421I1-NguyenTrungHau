@@ -8,10 +8,11 @@
 <script>
 
     var n = parseInt(prompt())
-    var number=new Array(n);
+    var number = new Array(n);
     alert(isPrime());
+
     function isPrime(number) {
-        for(let i=0;i<n;i++) {
+        for (let i = 0; i < n; i++) {
             if (i / 1 == i && i % i == 1) {
                 document.writeln(number[i]);
                 i++
@@ -19,7 +20,7 @@
                 i++
             }
         }
-            return i;
+        return i;
 
 
     }

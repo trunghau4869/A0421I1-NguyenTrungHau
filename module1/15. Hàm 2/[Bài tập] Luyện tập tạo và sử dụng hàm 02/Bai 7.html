@@ -6,10 +6,11 @@
 </head>
 <body>
     <script>
-        alert(swap())
-        function swap(a,b) {
-             a=parseInt(prompt("Nhap so a : "))
-             b=parseInt(prompt("Nhap so b : "))
+
+        let num=Swap(parseInt(prompt("Nhap so a : ")),parseInt(prompt("Nhap so b : ")))
+        alert(num)
+        function Swap(a,b) {
+
             let temp=0;
             temp=a;
             a=b;

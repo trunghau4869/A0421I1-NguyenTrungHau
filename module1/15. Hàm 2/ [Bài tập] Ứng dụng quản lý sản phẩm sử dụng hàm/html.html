@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    var arr = ["SamSung", "Nokia", "Iphone", "Asus", "Xiaomi"];
+    document.writeln(HienThiSP())
+
+    function HienThiSP() {
+        document.body.innerHTML = "";
+        document.writeln('<h1>Add New Product</h1>')
+        document.writeln('<input type="text" id="them">')
+        document.writeln('<input type="button" value="Add" onclick="ThemSP()">')
+        document.writeln("<table border='2px solid red' >")
+        for (let i = 0; i < arr.length; i++) {
+            document.writeln("<tr>")
+            document.writeln("<td>" + arr[i] + "</td>")
+            document.writeln("<td>" + '<input type="button"value="Xoa" onclick="XoaSP()">' + "</td>")
+            document.writeln("<td>" + '<input type="button"value="Sua" onclick="SuaSP()">' + "</td>" + "<br>")
+            document.writeln("</tr>")
+        }
+        document.writeln("</table>");
+    }
+
+    function ThemSP() {
+        var add = document.getElementById("them").value;
+        if (arr.indexOf(add) != -1) {
+            alert("Sản phẩm đã tồn tại. Mời bạn nhập thông tin khác!")
+        } else {
+            arr.push(add);
+            alert("them thanh cong");
+            HienThiSP()
+        }
+    }
+    function SuaSP(index) {
+        document.body.innerHTML = "";
+        document.writeln('<h1>Add New Product</h1>')
+        document.writeln('<input type="text" id="them">')
+        document.writeln('<input type="button" value="Add" onclick="ThemSP()">')
+        document.writeln("</br><table border='2px solid red' >")
+        for (let i = 0; i < arr.length; i++) {
+            document.writeln("<tr>")
+            if (i == index) {
+                document.write("<td><input id='editValueOfProduct' value='" + arr[i] + "'></td>");
+                document.writeln("<td> <input type='button' value='Update' onclick='successProduct()'></td>")
+            } else {
+                document.write("<td>" + arr[i] + "</td>");
+                document.writeln("<td>" + '<input type="button"value="Xoa" onclick="XoaSP()">' + "</td>")
+            }
+
+            document.writeln("<td>" + '<input type="button"value="Sua" onclick="SuaSP()">' + "</td>" + "<br>")
+            document.writeln("</tr>")
+        }
+        document.writeln("</table>")
+
+    }
+
+    function XoaSP(i) {
+        if (confirm("ban co muon xoa hay khong")) {
+            arr.splice(i+1, 1)
+            HienThiSP()
+        }
+    }
+    function successProduct(index) {
+        let product = document.getElementById("editValueOfProduct").value;
+        if (arr.indexOf(product) != -1) {
+            alert("Sản phẩm đã tồn tại. Mời bạn nhập thông tin khác!")
+        } else {
+            arr[index] = product;
+            HienThiSP()
+        }
+    }
+</script>
+</body>
+</html>

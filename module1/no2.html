@@ -15,12 +15,14 @@
    //
    //  }
    //  alert(sum);
+   let n=parseInt(prompt())
+   let ar=[];
+   for(let i=0;i<n;i++){
+       ar[i]=parseInt(prompt())
+   }
    alert(f())
     function f(ar) {
-        let n=parseInt(prompt())
-        for(let i=0;i<n;i++){
-            ar[i]=parseInt(prompt())
-        }
+
         let sum=0;
         for(let i=0;i<n;i++){
             sum +=ar[i];

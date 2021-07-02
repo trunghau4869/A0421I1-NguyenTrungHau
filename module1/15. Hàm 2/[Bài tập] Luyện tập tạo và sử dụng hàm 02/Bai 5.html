@@ -6,11 +6,10 @@
 </head>
 <body>
 <script>
-    alert(findMin())
-    function findMin() {
-        var a = parseInt(prompt("nhap so a bat ki : "))
-        var b = parseInt(prompt("nhap so b bat ki : "))
-        var c = parseInt(prompt("nhap so c bat ki : "))
+    var num = FindMin(parseInt(prompt("nhap so a :")),parseInt(prompt("nhap so b :")),parseInt(prompt("nhap so c :")))
+
+    alert(num)
+    function FindMin(a,b,c) {
         var min = a;
         if (min >= b) {
             min = b

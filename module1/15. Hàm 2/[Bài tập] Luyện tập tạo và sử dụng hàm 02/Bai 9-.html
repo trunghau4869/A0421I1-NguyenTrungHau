@@ -6,11 +6,9 @@
 </head>
 <body>
 <script>
-    alert(soSachKiTu())
-
-    function soSachKiTu(n) {
-         n = parseInt(prompt("nhap so phan tu trong mang :"))
-
+    let n=SoSachKiTu(parseInt(prompt("nhap so phan tu trong mang :")))
+    alert(n)
+    function SoSachKiTu(n) {
         let arr = [];
         for (let i = 0; i < n; i++) {
             arr[i] = prompt("nhap phan tu thu " + i + ":")

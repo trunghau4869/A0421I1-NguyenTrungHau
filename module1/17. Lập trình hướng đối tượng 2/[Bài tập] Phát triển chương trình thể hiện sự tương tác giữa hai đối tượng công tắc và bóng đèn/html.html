@@ -30,21 +30,21 @@
                 return "switch connect to lamp";
         }
 
-        switchOff(Lamp) {
-            if(Lamp.status==="Off") {
+        switchOff(lamp) {
+            if(lamp.status==="Off") {
                 return "Lamp is Off";
             }else {
-                Lamp.status="Off";
-                return Lamp.turnOff();
+                lamp.status="Off";
+                return lamp.turnOff();
             }
         }
 
-        switchOn(Lamp) {
-            if(Lamp.status==="On") {
+        switchOn(lamp) {
+            if(lamp.status==="On") {
                 return "Lamp is On";
             }else {
-                Lamp.status="On";
-                return Lamp.turnOn();
+                lamp.status="On";
+                return lamp.turnOn();
             }
         }
 
@@ -55,17 +55,29 @@
     alert(switch1.connectToLamp())
     alert(Lamp.status)
     alert(switch1.switchOn(Lamp))
+    alert(Lamp.status)
     alert(switch1.switchOff(Lamp))
+    alert(Lamp.status)
     alert(switch1.switchOn(Lamp))
+    alert(Lamp.status)
     alert(switch1.switchOff(Lamp))
+    alert(Lamp.status)
     alert(switch1.switchOn(Lamp))
+    alert(Lamp.status)
     alert(switch1.switchOff(Lamp))
+    alert(Lamp.status)
     alert(switch1.switchOn(Lamp))
+    alert(Lamp.status)
     alert(switch1.switchOff(Lamp))
+    alert(Lamp.status)
     alert(switch1.switchOn(Lamp))
+    alert(Lamp.status)
     alert(switch1.switchOff(Lamp))
+    alert(Lamp.status)
     alert(switch1.switchOn(Lamp))
+    alert(Lamp.status)
     alert(switch1.switchOff(Lamp))
+    alert(Lamp.status)
 
 
 </script>

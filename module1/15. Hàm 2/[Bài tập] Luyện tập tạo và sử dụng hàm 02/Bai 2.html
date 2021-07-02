@@ -8,15 +8,17 @@
 <script>
 
 
-    function tinhS(r) {
-        r=parseFloat(prompt("nhap vao ban kinh hinh tron : "))
+    function TinhS(r) {
+
         return (r*r)*(Math.PI)
     }
-    function tinhC(r) {
-        r=parseFloat(prompt("nhap vao ban kinh hinh tron : "))
+    function TinhC(r) {
+
         return r*2*Math.PI
     }
-    document.writeln("dien tich hinh tron la :"+ tinhS()+"<br>"+"chu vi hinh tron la : "+ tinhC())
+    let r=TinhC(5)
+    let R=TinhS(5)
+    document.writeln("dien tich hinh tron la :"+ R+"<br>"+"chu vi hinh tron la : "+ r)
 </script>
 </body>
 </html>

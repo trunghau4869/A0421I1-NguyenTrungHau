@@ -9,63 +9,64 @@
 
     let arr = ["1.Cafe", "2.Cam vat", "3.Nuoc ep ca rot", "4.Nuoc ep ca chua", "5.Nuoc loc", "6.Nuoc dua", "7.Thoat"];
     let arr1 = ["20000", "30000", "25000", "25000", "15000", "25000", "!!"];
-    for (let i = 0; i < arr.length; i++) {
-        document.writeln(arr[i] + " : " + arr1[i] + "<select id=\"soluong\">\n" +
-            "    <option>1</option>\n" +
-            "    <option>2</option>\n" +
-            "    <option>3</option>\n" +
-            "    <option>4</option>\n" +
-            "    <option>5</option>\n" +
-            "    <option>6</option>\n" +
-            "    <option>7</option>\n" +
-            "    <option>8</option>\n" +
-            "    <option>9</option>\n" +
-            "    <option>10</option>\n" +
-            "\n" +
-            "</select>" + "<br>");
-    }
+    // for (let i = 0; i < arr.length; i++) {
+    //     document.writeln(arr[i] + " : " + arr1[i] +
+    // function chonSoLuong() {
+    //    " <select>"
+    //         "<option>1</option>"
+    //         "<option>2</option>"
+    //         "<option>3</option>"
+    //         "<option>4</option>"
+    //         "<option>5</option>"
+    //         "<option>6</option>"
+    //         "<option>7</option>"
+    //         "<option>8</option>"
+    //         "<option>9</option>"
+    //     "</select>"
+    // }
 
     function option() {
         let result = 0;
         let chon = document.getElementById("option1").value;
-        let soluong1= document.getElementById("soluong").value;
-        alert(soluong1)
-        for (let i = 0; i < arr1.length; i++) {
-            switch (chon > 0 && chon < 8) {
+       // let soluong1 = document.getElementById("soluong").value;
+       // alert(soluong1)
+      //  for (let i = 0; i < arr1.length; i++) {
+            switch (chon) {
                 case 1:
-                    result += soluong1*arr1[i];
+                    result +=  arr1[i+1];
                     alert(result)
                     break;
                 case 2:
-                    result +=  soluong1*arr1[i];
+                   result += arr1[i+1];
                     alert(result)
                     break;
                 case 3:
-                    result +=  soluong1*arr1[i];
+                 result +=arr1[i+1];
                     alert(result)
                     break;
                 case 4:
-                    result +=  soluong1*arr1[i];
+                  result +=arr1[i+1];
                     alert(result)
                     break;
                 case 5:
-                    result +=  soluong1*arr1[i];
+                   result +=  arr1[i+1];
                     alert(result)
                     break;
                 case 6:
-                    result +=  soluong1*arr1[i];
+                result +=  arr1[i+1];
                     alert(result)
                     break;
-                case 7:
+                default:
                     alert("ban da chon Thoat khoi chuong trinh");
+                   // result +=  arr1[i+1];
+                    alert(arr1[6])
                     break;
-
             }
-        }
+        //}
     }
 </script>
 <h2>Bạn hãy chọn thức uống!</h2>
 <input type="textbox" id="option1">
-<button onclick="option()" value="Chon">Chon</button>
+<button onclick="option()" >Chon</button>
 </body>
 </html>
