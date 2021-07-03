@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
 </head>
 <body>
 
 <script>
 
     var arr = ["SamSung", "Nokia", "Iphone", "Asus", "Xiaomi"];
-    document.writeln(HienThiSP())
+    HienThiSP()
 
     function HienThiSP() {
         document.body.innerHTML = "";
-        document.writeln('<h1>Add New Product</h1>')
+        document.writeln('<h1 style="font-family: sans-serif;color: rgb(60,179,113) ;text-shadow:#d61b06;" >ADD NEW PRODUCT</h1>')
         document.writeln('<input type="text" id="them">')
-        document.writeln('<input type="button" value="Add" onclick="ThemSP()">')
-        document.writeln("<table border='2px solid red' >")
+        document.writeln('<input type="button" value="Them" onclick="ThemSP()"style="background-color: aquamarine;border-radius:6px ">')
+        document.writeln("<table border='2px solid' >")
         for (let i = 0; i < arr.length; i++) {
             document.writeln("<tr>")
             document.writeln("<td>" + arr[i] + "</td>")
-            document.writeln("<td>" + '<input type="button"value="Xoa" onclick="XoaSP()">' + "</td>")
-            document.writeln("<td>" + '<input type="button"value="Sua" onclick="SuaSP()">' + "</td>" + "<br>")
+            document.writeln("<td>" + '<input type="button"value="Xoa" style="background-color: aquamarine;border-radius:6px;"onclick="XoaSP(' + i + ')">' + "</td>")
+            document.writeln("<td>" + '<input type="button"value="Sua" style="background-color: aquamarine;border-radius:6px "onclick="SuaSP(' + i + ')">' + "</td>" + "<br>")
             document.writeln("</tr>")
         }
         document.writeln("</table>");
@@ -37,23 +38,23 @@
             HienThiSP()
         }
     }
+
     function SuaSP(index) {
         document.body.innerHTML = "";
-        document.writeln('<h1>Add New Product</h1>')
+        document.writeln('<h1 style="font-family: sans-serif;color: rgb(60,179,113);text-shadow:#d61b06;  " >ADD NEW PRODUCT</h1>')
         document.writeln('<input type="text" id="them">')
-        document.writeln('<input type="button" value="Add" onclick="ThemSP()">')
-        document.writeln("</br><table border='2px solid red' >")
+        document.writeln('<input type="button" value="Them" onclick="ThemSP()"style="background-color: aquamarine;border-radius:6px ;">')
+        document.writeln("</br><table border='2px solid ' >")
         for (let i = 0; i < arr.length; i++) {
             document.writeln("<tr>")
             if (i == index) {
-                document.write("<td><input id='editValueOfProduct' value='" + arr[i] + "'></td>");
-                document.writeln("<td> <input type='button' value='Update' onclick='successProduct()'></td>")
+                document.write("<td><input  id='suaSanPham' value='" + arr[i] + "'></td>");
+                document.writeln("<td>" + '<input type="button" value="Update" onclick="HoanThanh(' + i + ')"style="background-color: aquamarine;border-radius:6px ;">' + "</td>")
             } else {
                 document.write("<td>" + arr[i] + "</td>");
-                document.writeln("<td>" + '<input type="button"value="Xoa" onclick="XoaSP()">' + "</td>")
+                document.writeln("<td>" + '<input type="button"value="Xoa" onclick="XoaSP(' + i + ')"style="background-color: aquamarine;border-radius:6px ;">' + "</td>")
             }
-
-            document.writeln("<td>" + '<input type="button"value="Sua" onclick="SuaSP()">' + "</td>" + "<br>")
+            document.writeln("<td>" + '<input type="button"value="Sua" onclick="SuaSP(' + i + ')"style="background-color: aquamarine;border-radius:6px ;">' + "</td>" + "<br>")
             document.writeln("</tr>")
         }
         document.writeln("</table>")
@@ -62,16 +63,18 @@
 
     function XoaSP(i) {
         if (confirm("ban co muon xoa hay khong")) {
-            arr.splice(i+1, 1)
+            arr.splice(i, 1)
             HienThiSP()
         }
     }
-    function successProduct(index) {
-        let product = document.getElementById("editValueOfProduct").value;
+
+    function HoanThanh(i) {
+        let product = document.getElementById("suaSanPham").value;
         if (arr.indexOf(product) != -1) {
             alert("Sản phẩm đã tồn tại. Mời bạn nhập thông tin khác!")
         } else {
-            arr[index] = product;
+            arr[i] = product;
+            alert("Sua san pham thanh cong")
             HienThiSP()
         }
     }

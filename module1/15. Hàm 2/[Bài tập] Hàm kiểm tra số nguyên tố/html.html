@@ -6,23 +6,26 @@
 </head>
 <body>
 <script>
-
-    var n = parseInt(prompt())
-    var number = new Array(n);
-    alert(isPrime());
-
-    function isPrime(number) {
-        for (let i = 0; i < n; i++) {
-            if (i / 1 == i && i % i == 1) {
-                document.writeln(number[i]);
-                i++
+    document.writeln(isPrime());
+    function isPrime() {
+        var number = [];
+        for (let i = 0; i < 10000; i++) {
+            var flag = true;
+            if (i < 2) {
+                flag = false;
             } else {
-                i++
+                for (var j = 2; j < i - 1; j++) {
+                    if (i % j == 0) {
+                        flag = false;
+                        break;
+                    }
+                }
+            }
+            if (flag == true) {
+                number.push(i);
             }
         }
-        return i;
-
-
+        return number;
     }
 </script>
 </body>
