@@ -1,4 +1,0 @@
-package Bai3_mang_va_phuong_thuc_trong_java.bai_tap.tinh_tong_cac_so_o_duong_cheo_chinh_cua_ma_tran_vuong;
-
-public class tong_cac_so_o_duong_cheo_chinh_cua_ma_tran_vuong {
-}
