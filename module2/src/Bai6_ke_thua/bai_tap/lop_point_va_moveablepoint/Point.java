@@ -1,14 +1,13 @@
-package Bai6_ke_thua.bai_tap.lop_point2d_va_lop_point3d;
+package Bai6_ke_thua.bai_tap.lop_point_va_moveablepoint;
 
-public class Point2D {
+public class Point {
     public float x;
     public float y;
 
-    public Point2D() {
-
+    public Point() {
     }
 
-    public Point2D(float x, float y) {
+    public Point(float x, float y) {
         this.x = x;
         this.y = y;
     }
