@@ -1,8 +1,8 @@
 package Bai6_ke_thua.bai_tap.lop_point_va_moveablepoint;
 
 public class Point {
-    public float x;
-    public float y;
+    protected float x;
+    protected float y;
 
     public Point() {
     }
