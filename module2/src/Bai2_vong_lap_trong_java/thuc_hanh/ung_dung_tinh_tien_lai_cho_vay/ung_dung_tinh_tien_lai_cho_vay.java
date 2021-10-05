@@ -1,4 +1,4 @@
-package Bai2_vong_lap_trong_java.thuc_hanh.ung_dung_tinh_tien_lai_cho_vay;
+package b2.thuc_hanh.ung_dung_tinh_tien_lai_cho_vay;
 
 import java.util.Scanner;
 

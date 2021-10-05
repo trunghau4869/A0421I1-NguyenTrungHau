@@ -1,4 +1,4 @@
-package Bai2_vong_lap_trong_java.thuc_hanh.thiet_ke_menu_cho_ung_dung;
+package b2.thuc_hanh.thiet_ke_menu_cho_ung_dung;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package Bai2_vong_lap_trong_java.thuc_hanh.tim_uoc_chung_lon_nhat;
+package b2.thuc_hanh.tim_uoc_chung_lon_nhat;
 import java.util.Scanner;
 public class tim_uoc_chung_lon_nhat {
     public static void main(String[] args) {

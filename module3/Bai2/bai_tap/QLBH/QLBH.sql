@@ -18,9 +18,10 @@ pName varchar(50),
 pPrice double
 );
 create table OrderDetail(
-oID int auto_increment primary key,
-pID int  ,
+oID int ,
+pID int ,
 odQTY varchar(50),
+constraint odID primary key(oID,pID),
 foreign key(oID) references `Order`(oID),
 foreign key(pID) references Product(pID)
 );

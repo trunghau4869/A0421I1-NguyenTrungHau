@@ -1,4 +1,4 @@
-package Bai2_vong_lap_trong_java.thuc_hanh.kiem_tra_so_nguyen_to;
+package b2.thuc_hanh.kiem_tra_so_nguyen_to;
 
 import java.util.Scanner;
 
