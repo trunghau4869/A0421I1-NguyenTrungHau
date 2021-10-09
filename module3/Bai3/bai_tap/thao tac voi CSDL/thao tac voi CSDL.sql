@@ -31,3 +31,34 @@ values
 
 select  oID, oDate, oTotalPrice
 from `order`;
+
+select customer.CName,product.pName 
+from orderdetail
+inner join `order` on `order`.oID=orderdetail.oID
+join customer on customer.cID=orderdetail.oID
+inner join product on product.pID=orderdetail.oID;
+
+
+select customer.CName 
+from customer
+left join `order`
+on `order`.cID=customer.cID
+where oID is null;
+
+select orderdetail.oID,(odQTY*pPrice) as total,`order`.oDate from `order` 
+inner join product on product.pID=`order`.oID
+inner join orderdetail on orderdetail.pID=`order`.oID
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
