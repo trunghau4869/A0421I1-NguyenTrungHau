@@ -244,8 +244,54 @@ select distinct hoten from khachhang;
 select hoten from khachhang
 group by HoTen;
 -- task9 --
-select count(hopdong.idkhachhang) as so_khach_hang from khachhang
+select count(hopdong.idkhachhang) as so_khach_hang , month (ngaylamhopdong) as thang,year(ngaylamhopdong) as nam from khachhang
 inner join hopdong on hopdong.IDKhachHang=khachhang.IDKhachHang
+where year(hopdong.ngaylamhopdong)='2019'
+group by month (ngaylamhopdong);
+-- task10 --
+select  hopdong.IDHopDong,  hopdong.NgayLamHopDong,  hopdong.NgayKetthuc,  hopdong.TienDatCoc,count(hopdongchitiet.IDHopDongChiTiet) as SoLuongDichVuDiKem  from hopdong
+inner join hopdongchitiet on hopdongchitiet.IDHopDong=hopdong.IDHopDong
+group by IDHopDong;
+-- task11 --
+select loaikhach.TenLoaiKhach,khachhang.DiaChi,dichvudikem.TenDichVuDiKem,dichvudikem.Gia ,khachhang.HoTen from dichvudikem
+inner join hopdongchitiet on hopdongchitiet.IDDichVuDiKem=dichvudikem.IDDichVuDiKem
+inner join hopdong on hopdong.IDHopDong=hopdongchitiet.IDHopDong
+inner join khachhang on khachhang.IDKhachHang=hopdong.IDKhachHang
+inner join loaikhach on loaikhach.IDLoaiKhach=khachhang.IDLoaiKhach
+where TenLoaiKhach='diamond' and (DiaChi='vinh' or DiaChi='quang tri');
+
+-- task12 chua xong--
+-- SoLuongDichVuDikem (được tính dựa trên tổng Hợp đồng chi tiết)
+select hopdong.IDHopDong, nhanvien.hoten, khachhang.HoTen, khachhang.SDT, dichvu.TenDichVu
+ from hopdong
+inner join khachhang on khachhang.IDKhachHang=hopdong.IDKhachHang
+inner join nhanvien on nhanvien.IDNhanVien=hopdong.IDNhanVien
+inner join dichvu on dichvu.IDDichVu=hopdong.IDDichVu
+inner join hopdongchitiet on hopdongchitiet.IDHopDong=hopdong.IDHopDong;
+
+ -- task 13 --
+
+select dichvudikem.TenDichVuDiKem,dichvudikem.TrangThaiKhaDung,dichvudikem.Gia,dichvudikem.DonVi,hopdongchitiet.SoLuong from   dichvudikem
+inner join hopdongchitiet on hopdongchitiet.IDDichVuDiKem=dichvudikem.IDDichVuDiKem
+order by soluong desc;
+
+-- task 14 --
+ 
+ select hopdong.IDHopDong, loaidichvu.TenLoaiDichVu, dichvudikem.TenDichVuDiKem,count(dichvudikem.IDDichVuDiKem) as So_Lan_Su_Dung  from hopdong
+ inner join dichvu on dichvu.IDDichVu=hopdong.IDDichVu
+ inner join loaidichvu on loaidichvu.IDLoaiDichVu=dichvu.IDLoaiDichVu
+ inner join hopdongchitiet on hopdongchitiet.IDHopDong=hopdong.IDHopDong
+ inner join dichvudikem on dichvudikem.IDDichVuDiKem=hopdongchitiet.IDDichVuDiKem
+ group by dichvudikem.IDDichVuDiKem
+ having  So_Lan_Su_Dung=1;
+-- task 15 --
+select nhanvien.IDNhanVien, nhanvien.HoTen, TrinhDo.TenTrinhDo , bophan.TenBoPhan, nhanvien.SDT, nhanvien.DiaChi from nhanvien
+inner join trinhdo on trinhdo.IDTrinhDo=nhanvien.IDTrinhDo
+inner join bophan on bophan.IDBoPhan=nhanvien.IDBoPhan
+inner join hopdong on hopdong.IDNhanVien=nhanvien.IDNhanVien
+where year(hopdong.ngaylamhopdong)='2019' or year(hopdong.ngaylamhopdong)='2018'
+group by hopdong.IDNhanVien
+having count(IDHopDong) >=3
 
 
  
