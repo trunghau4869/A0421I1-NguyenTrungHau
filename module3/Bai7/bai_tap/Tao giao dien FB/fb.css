@@ -52,6 +52,7 @@ header, footer {
     width: 100%;
     padding: 10px;
     color: white;
+    z-index: 1;
 
 }
 

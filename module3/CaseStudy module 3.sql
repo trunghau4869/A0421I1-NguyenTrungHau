@@ -199,11 +199,9 @@ values
 select * from nhanvien
 where hoten like 'h%' or hoten like 't%' or hoten like'k%' and character_length(hoten)<=15;
 -- task3 --
-select * from khachhang;
--- where diachi='quang tri' or diachi='da nang' and datediff(CURDATE()-ngaysinh) as tuoi;
-
--- select datediff(CURDATE()-ngaysinh) as tuoi from khachhang
-
+select * from khachhang
+where (timestampdiff(year,ngaysinh,curdate()) between 18 and 50)  and 
+(diachi='quang tri' or diachi='da nang');
 -- task4 --
 select count(hopdong.IDKhachHang) as so_lan_dat ,khachhang.HoTen ,loaikhach.TenLoaiKhach from hopdong
 inner join khachhang on khachhang.IDKhachHang=hopdong.IDKhachHang
@@ -291,9 +289,16 @@ inner join bophan on bophan.IDBoPhan=nhanvien.IDBoPhan
 inner join hopdong on hopdong.IDNhanVien=nhanvien.IDNhanVien
 where year(hopdong.ngaylamhopdong)='2019' or year(hopdong.ngaylamhopdong)='2018'
 group by hopdong.IDNhanVien
-having count(IDHopDong) >=3
-
-
- 
-
-	
+having count(IDHopDong) >=3;
+-- task16 --
+delete nv,hd from nhanvien nv
+join hopdong  hd on hd.idnhanvien=nv.IDNhanVien
+where  not (year(ngaylamhopdong)>=2017 and year(ngaylamhopdong)<=2019);
+-- task18--
+delete kh,hd from khachhang kh
+join hopdong  hd on hd.IDKhachHang=kh.IDKhachHang
+where  year(ngaylamhopdong)<=2016;
+-- task20--
+select IDNhanVien, HoTen, Email, Sdt, NgaySinh, DiaChi from nhanvien
+union all
+select IDKhachHang, HoTen, Email, Sdt, NgaySinh, DiaChi from khachhang
