@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+}
+.responsive{
+    float: left;
+}
+
+
+@media only screen and (min-width: 700px){
+    .responsive{width: 24.99999%;}
+}
+@media only screen and (max-width: 699px){
+    .responsive{width: 48%;}
+}
+@media only screen and (max-width: 499px){
+    .responsive{width: 100%;}
+}
