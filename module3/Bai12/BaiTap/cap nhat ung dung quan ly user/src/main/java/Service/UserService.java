@@ -10,7 +10,12 @@ public interface UserService {
 
     public User selectUser(int id);
 
+
     public List<User> selectAllUsers();
+
+    public List<User> selectSortByUsers();
+
+    List<User> findByCountry(String nameUser);
 
     public boolean deleteUser(int id) throws SQLException;
 
