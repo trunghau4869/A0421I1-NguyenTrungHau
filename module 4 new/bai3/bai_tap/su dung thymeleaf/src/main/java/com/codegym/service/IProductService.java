@@ -4,7 +4,7 @@ import com.codegym.model.Product;
 
 import java.util.List;
 
-public interface ICustomerService {
+public interface IProductService {
     List<Product> findAll();
 
     void save(Product product);

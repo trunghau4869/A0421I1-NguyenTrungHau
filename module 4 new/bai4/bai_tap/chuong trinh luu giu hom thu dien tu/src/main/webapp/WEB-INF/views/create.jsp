@@ -16,7 +16,6 @@
 <body>
 <form:form action="/create" method="post" modelAttribute="email">
     <table class="table table-striped">
-
         <tr>
             <td>
                 language
@@ -43,6 +42,7 @@
         </tr>
 
     </table>
+    <button class="btn btn-primary" type="submit">Create</button>
 </form:form>
 </body>
 </html>

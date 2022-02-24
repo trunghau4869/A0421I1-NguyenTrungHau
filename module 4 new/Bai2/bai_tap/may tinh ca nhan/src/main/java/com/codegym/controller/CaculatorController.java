@@ -12,12 +12,21 @@ public class CaculatorController {
     public String chooseCondiments() {
         return "index";
     }
-    @PostMapping("/calculate")
-    public String output(@RequestParam int num1 ,@RequestParam int num2 , Model model){
 
-        int resuilt=num1 +num2;
-        model.addAttribute("num1",num1);
-        model.addAttribute("num2",num2);
-        return "resuilt";
+    @PostMapping("/calculate")
+    public String output(@RequestParam float num1, @RequestParam float num2,@RequestParam String caculator, Model model) {
+        float resuilt=0;
+        if(caculator.equals("add")){
+            resuilt = num1 + num2;
+        }else  if(caculator.equals("sub")){
+            resuilt = num1 - num2;
+        }else  if(caculator.equals("mul")){
+            resuilt = num1 * num2;
+        }else  if(caculator.equals("div")){
+            resuilt = num1 / num2;
+        }
+        model.addAttribute("resuilt", resuilt);
+
+        return "index";
     }
 }

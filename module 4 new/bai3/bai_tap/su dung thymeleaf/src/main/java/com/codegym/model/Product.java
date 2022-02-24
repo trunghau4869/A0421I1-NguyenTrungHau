@@ -1,19 +1,19 @@
 package com.codegym.model;
 
-public class Customer {
+public class Product {
     private int id;
-    private String name;
-    private String email;
-    private String address;
+    private String nameProduct;
+    private double price;
+    private int amount;
 
-    public Customer() {
+    public Product() {
     }
 
-    public Customer(int id, String name, String email, String address) {
+    public Product(int id, String nameProduct, double price, int amount) {
         this.id = id;
-        this.name = name;
-        this.email = email;
-        this.address = address;
+        this.nameProduct = nameProduct;
+        this.price = price;
+        this.amount = amount;
     }
 
     public int getId() {
@@ -24,27 +24,27 @@ public class Customer {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNameProduct() {
+        return nameProduct;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameProduct(String nameProduct) {
+        this.nameProduct = nameProduct;
     }
 
-    public String getEmail() {
-        return email;
+    public double getPrice() {
+        return price;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
-    public String getAddress() {
-        return address;
+    public int getAmount() {
+        return amount;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
 }

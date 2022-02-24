@@ -7,18 +7,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class CustomerService implements ICustomerService {
+public class ProductService implements IProductService {
     private static final Map<Integer, Product> products;
 
     static {
 
         products = new HashMap<>();
-        products.put(1, new Product(1, "Tivi", 15000000.0, 5));
-        products.put(2, new Product(2, "Washing Machine", 9000000.0, 10));
-        products.put(3, new Product(3, "SmartPhone", 10000000.0, 15));
-        products.put(4, new Product(4, "Fridge", 17000000.0, 7));
-        products.put(5, new Product(5, "Gas Cooker", 8000000.0, 9));
-        products.put(6, new Product(6, "Air Conditioning", 12000000.0, 12));
+        products.put(1, new Product(1, "Tivi", 10000.0, 5));
+        products.put(2, new Product(2, "Washing Machine", 9000.0, 10));
+        products.put(3, new Product(3, "SmartPhone", 10000.0, 15));
+        products.put(4, new Product(4, "Fridge", 17000.0, 7));
+        products.put(5, new Product(5, "Gas Cooker", 8000.0, 9));
+        products.put(6, new Product(6, "Air Conditioning", 12000.0, 12));
     }
 
     @Override

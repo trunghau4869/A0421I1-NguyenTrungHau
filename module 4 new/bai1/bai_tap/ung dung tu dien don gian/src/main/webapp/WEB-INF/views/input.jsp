@@ -12,7 +12,7 @@
 </head>
 <body>
 <form method="post" action="convert">
-    <input type="number"  name="usd" placeholder="USD">
+    <input type="text"  name="inputText" >
     <button type="submit">Convert</button>
 </form>
 </body>

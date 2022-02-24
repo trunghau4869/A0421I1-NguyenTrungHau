@@ -7,21 +7,25 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class MoneyConversionController {
+public class DictionaryController {
 
     @GetMapping("/")
-    public String show(){
+    public String show() {
         return "input";
     }
 
     @PostMapping("/convert")
-    public String convert( @RequestParam String  inputText , Model model){
-        if(inputText.equals("House")){
-            model.addAttribute("NgoiNha",inputText);
+    public String convert(@RequestParam String inputText, Model model) {
+        String resuilt = "";
+        if (inputText.equals("house")) {
+            resuilt = "Ngoi Nha";
+        } else if (inputText.equals("flower")) {
+            resuilt = "Bong Hoa";
+        } else {
+            resuilt = "unKnown";
         }
-
-
-//        model.addAttribute("resuilt",resuilt);
+        model.addAttribute("resuilt", resuilt);
+        model.addAttribute("inputText", inputText);
         return "index";
 
     }

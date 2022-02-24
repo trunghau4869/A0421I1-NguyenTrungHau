@@ -11,7 +11,7 @@
     <title>$Title$</title>
   </head>
   <body>
-  <h1>${usd} USD = ${resuilt} VND  </h1>
+  <h1>${inputText} : ENG = ${resuilt} : VN  </h1>
   <h1></h1>
 
   </body>

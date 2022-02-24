@@ -11,5 +11,6 @@ public interface IEmailService {
     void saveEmail(Email email);
     void updateEmail(Email email);
     void editEmail(Email email);
+    Email finEmail(int id);
 
 }
