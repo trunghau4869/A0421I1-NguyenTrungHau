@@ -5,34 +5,28 @@ import com.codegym.service.EmailService;
 import com.codegym.service.IEmailService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping("/email")
+@RequestMapping("/")
 public class EmailController {
     IEmailService emailService = new EmailService();
-    private List<Email> emails = new ArrayList<>();
 
-    @GetMapping("/showList")
+
+    @GetMapping("/")
     public String show(Model model) {
-        List<Email> emails = emailService.getEmailList();
-        model.addAttribute("emails", emails);
-        return "list";
+        model.addAttribute("emails", new Email(1, "English", 20, true, "John"));
+        return "edit";
     }
-
-    @GetMapping("/{id}/edit")
-    public String edit(@PathVariable int id, Model model) {
-        model.addAttribute("email", emailService.finEmail(id));
-        return "index";
+    @PostMapping("/update")
+    public String update(@ModelAttribute("emails") Email email,Model model) {
+        model.addAttribute(email);
+        return "resuilt";
     }
-//    @PostMapping("/create")
-//    public String create(@ModelAttribute("email") Email email) {
-//        emails.add(email);
-//        return "redirect:/list";
-//    }
 
 
 }

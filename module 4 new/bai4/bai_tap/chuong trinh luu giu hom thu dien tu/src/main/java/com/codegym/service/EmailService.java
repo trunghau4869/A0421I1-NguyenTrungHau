@@ -6,24 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmailService implements IEmailService {
-    private static List<Email> emailList;
-
-    static {
-        emailList = new ArrayList<>();
-        emailList.add(new Email(1,"English", 20, true, "John"));
-        emailList.add(new Email(2,"Vietnamese", 15, false, "Mike"));
-        emailList.add(new Email(3,"Japanese", 25, true, "Alex"));
-        emailList.add(new Email(4,"Chinese", 10, false, "Son"));
-    }
-
-    @Override
-    public List<Email> getEmailList() {
-        return emailList;
-    }
 
     @Override
     public void saveEmail(Email email) {
-        emailList.add(email);
+
+//        email.add(email);
     }
 
     @Override
@@ -33,12 +20,11 @@ public class EmailService implements IEmailService {
 
     @Override
     public void editEmail(Email email) {
+        email.setPageSize(email.getPageSize());
+        email.setLanguage(email.getLanguage());
+        email.setSignature(email.getSignature());
+        email.setSpamsFilter(email.isSpamsFilter());
 
-    }
-
-    @Override
-    public Email finEmail(int id) {
-        return emailList.get(id);
     }
 
 
