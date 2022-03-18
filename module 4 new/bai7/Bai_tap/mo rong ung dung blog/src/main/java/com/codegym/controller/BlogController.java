@@ -1,7 +1,9 @@
 package com.codegym.controller;
 
 import com.codegym.model.Blog;
+import com.codegym.model.Category;
 import com.codegym.service.BlogService;
+import com.codegym.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -18,6 +20,8 @@ import java.util.List;
 public class BlogController {
     @Autowired
     public BlogService blogService;
+    @Autowired
+    public CategoryService categoryService;
 
     @GetMapping("")
     public String defaultSite(@PageableDefault(size = 2) Pageable pageable, Model model) {
@@ -35,7 +39,9 @@ public class BlogController {
 
     @GetMapping("/create")
     public String create(Model model) {
+        List<Category> category=categoryService.findAll();
         model.addAttribute("blog", new Blog());
+        model.addAttribute("category", category);
         return "create";
     }
 

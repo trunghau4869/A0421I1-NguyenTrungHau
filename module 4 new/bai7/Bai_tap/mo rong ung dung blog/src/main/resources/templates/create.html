@@ -22,6 +22,11 @@
             <td><input type="text" th:field="${blog.content}"></td>
         </tr>
         <tr>
+            <select  th:field="*{category}">
+                <option th:each="province : ${category}" th:text="${category.name}" th:value="${category.id}"></option>
+            </select>
+        </tr>
+        <tr>
             <td> <button type="submit">Save</button></td>
             <td></td>
         </tr>
