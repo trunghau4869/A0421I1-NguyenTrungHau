@@ -1,0 +1,23 @@
+<div class="container">
+
+  <form action="">
+  <div class="col-3">
+    <label>Calculator</label>
+    <div>
+<!--      <input type="text" class="form-control" [(ngModel)]="start">-->
+
+    </div>
+    <div>
+<!--      <input type="text" class="form-control" [(ngModel)]="end">-->
+    </div>
+  </div>
+  <div class="col-4">
+    <button type="submit"  class="btn btn-info" (click)="addition()">+</button>
+    <button type="submit"  class="btn btn-primary" (click)="subtraction()">-</button>
+    <button type="submit"  class="btn btn-success" (click)="multiplication()">*</button>
+    <button type="submit"  class="btn btn-dark" (click)="division()">/</button>
+  </div>
+  </form>
+  <h1>Result : {{result}}</h1>
+</div>
+
