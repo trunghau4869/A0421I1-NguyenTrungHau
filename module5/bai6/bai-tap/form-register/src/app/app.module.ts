@@ -3,13 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TodoComponent } from './todo/todo.component';
+import { ModelDrivenFormComponent } from './model-driven-form/model-driven-form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoComponent
+    ModelDrivenFormComponent
   ],
   imports: [
     BrowserModule,
