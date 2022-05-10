@@ -7,17 +7,24 @@
          *ngIf="formCreateAccount.get('Email')?.invalid && formCreateAccount.get('Email')?.touched">
       Email is Required
     </div>
-    <input type="text" placeholder="Password" class="form-control" formControlName="Password"><br>
+    <input type="password" placeholder="Password" class="form-control" formControlName="Password"><br>
     <div class="alert alert-danger"
          *ngIf="formCreateAccount.get('Password')?.invalid && formCreateAccount.get('Password')?.touched">
       Password is Required
     </div>
-    <input type="text" placeholder="Confirm Password" class="form-control" formControlName="ConfirmPassword"><br>
+    <input type="password" placeholder="Confirm Password" class="form-control" formControlName="ConfirmPassword"><br>
     <div class="alert alert-danger"
          *ngIf="formCreateAccount.get('ConfirmPassword')?.invalid && formCreateAccount.get('ConfirmPassword')?.touched">
       Confirm Password is Required
     </div>
-    <input type="text" placeholder="Country" class="form-control" formControlName="Country"><br>
+    <div class="mt-0 mb-2">
+      <div>Country</div>
+      <select formControlName="Country">
+        <option value="Da Nang">Da Nang</option>
+        <option value="Dak Lak">Dak Lak</option>
+        <option value="Quang Nam">Quang Nam</option>
+      </select>
+    </div>
     <div class="alert alert-danger"
          *ngIf="formCreateAccount.get('Country')?.invalid && formCreateAccount.get('Country')?.touched">
       Country is Required
@@ -27,10 +34,14 @@
          *ngIf="formCreateAccount.get('Age')?.invalid && formCreateAccount.get('Age')?.touched">
       Age is Required
     </div>
-    <input type="text" placeholder="Gender" class="form-control" formControlName="Gender"><br>
-    <div class="alert alert-danger"
-         *ngIf="formCreateAccount.get('Gender')?.invalid && formCreateAccount.get('Gender')?.touched">
-      Gender is Required
+    <div class="mt-0 mb-2">
+      <div>Gender</div>
+      <input type="radio" value="Male" formControlName="Gender">Male
+      <input type="radio" value="Female" formControlName="Gender">Female
+      <div class="alert alert-danger"
+           *ngIf="formCreateAccount.get('Gender')?.invalid && formCreateAccount.get('Gender')?.touched">
+        Gender is Required
+      </div>
     </div>
     <input type="text" placeholder="Phone" class="form-control" formControlName="Phone"><br>
     <div class="alert alert-danger"

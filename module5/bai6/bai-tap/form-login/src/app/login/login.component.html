@@ -3,11 +3,16 @@
     <div class="text-center">
       <h1>Login</h1>
     </div>
-    <input type="text" value="Email" class="form-control m-2">
-    <div class="alert alert-danger" *ngIf="formLogin.get('Email')?.invalid && formLogin.get('Email')?.touched">
+    <input type="text" placeholder="Email" class="form-control m-2" formControlName="Email">
+    <div class="alert alert-danger"
+         *ngIf="formLogin.get('Email')?.invalid && formLogin.get('Email')?.touched">
       Email is required
     </div>
-    <input type="text" value="Password" class="form-control m-2">
+    <input type="text" placeholder="Password" class="form-control m-2" formControlName="Password">
+    <div class="alert alert-danger"
+         *ngIf="formLogin.get('Password')?.invalid && formLogin.get('Password')?.touched">
+      Email is required
+    </div>
     <div class="text-center">
       <button type="submit" class="btn btn-primary">Login</button>
     </div>
