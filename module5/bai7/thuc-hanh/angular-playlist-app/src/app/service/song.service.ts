@@ -23,7 +23,7 @@ export class SongService {
       name: 'Eminem - Love The Way You Lie ft. Rihanna'
     },
     {
-      id: 'WpYeekQkAdc',
+      id: '8WYHDfJDPDc',
       name: 'The Black Eyed Peas - Where Is The Love?'
     }
   ];
