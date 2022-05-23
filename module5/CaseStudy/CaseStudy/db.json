@@ -1,0 +1,103 @@
+{
+  "customer": [
+    {
+      "id": "1",
+      "name": "ad",
+      "birthday": "2022-05-05",
+      "gender": "nam",
+      "idCard": "123123",
+      "phone": "0112313",
+      "mail": "hau@gmail.com",
+      "type": "Platinium",
+      "address": "daklak"
+    },
+    {
+      "id": "2",
+      "name": "ad",
+      "birthday": "2022-05-05",
+      "gender": "nam",
+      "idCard": "123123",
+      "phone": "0112313",
+      "mail": "hau@gmail.com",
+      "type": "Platinium",
+      "address": "daklak"
+    },
+    {
+      "id": 3,
+      "name": "Trung Hau",
+      "birthday": "16/03/2000",
+      "gender": "Nam",
+      "idCard": "123456",
+      "phone": "0123456789",
+      "mail": "TrungHau@gmail.com",
+      "type": "Diamond",
+      "address": "Thanh Khe / Da Nang"
+    },
+    {
+      "id": "4",
+      "name": "ad",
+      "birthday": "2022-05-05",
+      "gender": "nam",
+      "idCard": "123123",
+      "phone": "0112313",
+      "mail": "hau@gmail.com",
+      "type": "Platinium",
+      "address": "daklak"
+    },
+    {
+      "id": "5",
+      "name": "ad",
+      "birthday": "2022-05-05",
+      "gender": "nam",
+      "idCard": "123123",
+      "phone": "0112313",
+      "mail": "hau@gmail.com",
+      "type": "Platinium",
+      "address": "daklak"
+    },
+    {
+      "id": "6",
+      "name": "ad",
+      "birthday": "2022-05-05",
+      "gender": "nam",
+      "idCard": "123123",
+      "phone": "0112313",
+      "mail": "hau@gmail.com",
+      "type": "Platinium",
+      "address": "daklak"
+    },
+    {
+      "id": "7",
+      "name": "ad",
+      "birthday": "2022-05-05",
+      "gender": "nam",
+      "idCard": "123123",
+      "phone": "0112313",
+      "mail": "hau@gmail.com",
+      "type": "Platinium",
+      "address": "daklak"
+    },
+    {
+      "id": "8",
+      "name": "hau",
+      "birthday": "2022-05-05",
+      "gender": "Nu",
+      "idCard": "123123",
+      "phone": "1233",
+      "mail": "hau@ad",
+      "type": "Platinium",
+      "address": "daklak"
+    },
+    {
+      "id": "9",
+      "name": "hau ne",
+      "birthday": "2022-05-13",
+      "gender": "Nu",
+      "idCard": "1231237",
+      "phone": "01231231231",
+      "mail": "hau@gmail.com",
+      "type": "Gold",
+      "address": "daklak"
+    }
+  ]
+}

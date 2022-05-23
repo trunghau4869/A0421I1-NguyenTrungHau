@@ -1,0 +1,114 @@
+<div class="row align-items-center mt-3">
+  <div class="col-2"></div>
+  <div class="col-8 card border-warning">
+    <form [formGroup]="editForm" (submit)="onSubmit()">
+      <div class="form-group mt-2">
+        <label for="exampleFormControlInput1">CustomerId</label>
+        <input formControlName="id" readonly type="text" class="form-control" id="exampleFormControlInput1">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Customer Name</label>
+        <input formControlName="name" type="text" class="form-control">
+        <p style="color: red" class="error" *ngIf="(editForm.get('name').hasError('pattern') && editForm.get('name').dirty)
+          || (editForm.get('name').hasError('required') && editForm.get('name').touched)">
+          Customer is required
+        </p>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Customer Birthday</label>
+        <input formControlName="birthday" type="text" class="form-control">
+        <!--        <p class="error" *ngIf="(editForm.get('email').hasError('pattern') && editForm.get('email').dirty)-->
+        <!--          || (editForm.get('email').hasError('required') && editForm.get('email').touched)">-->
+        <!--          Email Không Được Để Trống Và Phải Theo Định Dạng: abc@def.com-->
+        <!--        </p>-->
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Customer Gender</label>
+        <select formControlName="gender" class="form-control" id="exampleFormControlSelect1">-->
+          <option [ngValue]="'Nam'">Nam</option>
+          <option [ngValue]="'Nu'">Nu</option>
+        </select>
+        <p style="color: red" class="error" *ngIf="(editForm.get('gender').hasError('pattern') && editForm.get('gender').dirty)
+          || (editForm.get('gender').hasError('required') && editForm.get('gender').touched)">
+          Gender is Female or Male
+        </p>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Customer Id Card</label>
+        <input formControlName="idCard" type="text" class="form-control">
+        <p style="color: red" class="error" *ngIf="(editForm.get('idCard').hasError('pattern') && editForm.get('idCard').dirty)
+                  || (editForm.get('idCard').hasError('required') && editForm.get('idCard').touched)">
+          ID card is required
+        </p>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">phone</label>
+        <input formControlName="phone" type="text" class="form-control">
+        <p style="color: red" class="error"
+           *ngIf="(editForm.get('phone').hasError('required') && editForm.get('phone').touched)">
+          phone is required
+        </p>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">mail</label>
+        <input formControlName="mail" type="text" class="form-control">
+        <p style="color: red" class="error"
+           *ngIf="(editForm.get('mail').hasError('required') && editForm.get('mail').touched)">
+          mail is required
+        </p>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">type</label>
+        <input formControlName="type" type="text" class="form-control">
+        <p style="color: red" class="error"
+           *ngIf="(editForm.get('type').hasError('required') && editForm.get('type').touched)">
+          type is required
+        </p>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">address</label>
+        <input formControlName="address" type="text" class="form-control">
+        <p style="color: red" class="error"
+           *ngIf="(editForm.get('address').hasError('required') && editForm.get('address').touched)">
+          address is required
+        </p>
+      </div>
+
+      <div class="text-center m-3">
+        <button class="btn btn-danger mr-5">
+          <a id="huy" routerLink="/furama/customer">
+
+            Huỷ </a>
+            <i class="fas fa-times"></i>
+        </button>
+        <button type="submit" class="btn btn-primary">
+          <span class="ml-1">Cập Nhật </span>
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="col-2"></div>
+
+<div class="modal fade" [id]="'myModal' +customer.id" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <span>Do you want to delete customer have ID: {{customer.id}} </span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">
+          <a class="text-black-50" [routerLink]="'/delete/' + customer.id">
+            Có
+          </a>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

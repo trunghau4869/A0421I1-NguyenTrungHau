@@ -1,0 +1,44 @@
+{
+  "benh-an": [
+    {
+      "id": "BA-001",
+      "ma_benh_nhan": "BN-012",
+      "ten_benh_nhan": "Trung Hau",
+      "ngay_nhap_vien": "2022-05-07",
+      "ngay_xuat_vien": "2022-06-05",
+      "ly_do_nhap_vien": "Covid 19",
+      "phuong_phap_dieu_tri": "cách ly",
+      "bac_si_dieu_tri": "thanh toan"
+    },
+    {
+      "id": "BA-002",
+      "ma_benh_nhan": "BN-013",
+      "ten_benh_nhan": "Thanh Toan",
+      "ngay_nhap_vien": "2022-05-05",
+      "ngay_xuat_vien": "2022-06-05",
+      "ly_do_nhap_vien": "benh COVID",
+      "phuong_phap_dieu_tri": "Cách Ly",
+      "bac_si_dieu_tri": "Viet Hoang"
+    },
+    {
+      "id": "BA-003",
+      "ma_benh_nhan": "BN-013",
+      "ten_benh_nhan": "Thanh Toan",
+      "ngay_nhap_vien": "2022-05-05",
+      "ngay_xuat_vien": "2022-06-05",
+      "ly_do_nhap_vien": "benh COVID",
+      "phuong_phap_dieu_tri": "Cách Ly",
+      "bac_si_dieu_tri": "Viet Hoang"
+    }
+    ,{
+      "id": "BA-002",
+      "ma_benh_nhan": "BN-013",
+      "ten_benh_nhan": "Thanh Toan",
+      "ngay_nhap_vien": "2022-05-05",
+      "ngay_xuat_vien": "2022-06-05",
+      "ly_do_nhap_vien": "benh COVID",
+      "phuong_phap_dieu_tri": "Cách Ly",
+      "bac_si_dieu_tri": "Viet Hoang"
+    }
+  ]
+}

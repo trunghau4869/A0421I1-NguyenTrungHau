@@ -1,0 +1,133 @@
+<div class="content">
+<div class="row align-items-center mt-3">
+  <div class="col-2"></div>
+  <div class="col-8 card border-warning">
+    <form [formGroup]="editForm" (submit)="onSubmit()">
+      <div class="form-group mt-2">
+        <label for="exampleFormControlInput1">Mã Bệnh Án</label>
+        <input formControlName="id" readonly type="text" class="form-control" id="exampleFormControlInput1">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Mã Bệnh Nhân</label>
+        <input formControlName="ma_benh_nhan" type="text" class="form-control" readonly>
+<!--        <p style="color: red" class="error" *ngIf="(editForm.get('ma_benh_nhan').hasError('pattern') && editForm.get('ma_benh_nhan').dirty)-->
+<!--          || (editForm.get('ma_benh_nhan').hasError('required') && editForm.get('ma_benh_nhan').touched)">-->
+<!--          ma_benh_nhan is required-->
+<!--        </p>-->
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Tên Bệnh Nhân</label>
+        <input formControlName="ten_benh_nhan" type="text" class="form-control">
+        <p style="color: red" class="error" *ngIf="(editForm.get('ten_benh_nhan').hasError('pattern') && editForm.get('ten_benh_nhan').dirty)
+          || (editForm.get('ten_benh_nhan').hasError('required') && editForm.get('ten_benh_nhan').touched)">
+          Tên Bệnh Nhân is required
+        </p>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Ngày Nhập Viện</label>
+        <input formControlName="ngay_nhap_vien" type="date" class="form-control">
+        <p style="color: red" class="error" *ngIf="(editForm.get('ngay_nhap_vien').hasError('pattern') && editForm.get('ngay_nhap_vien').dirty)
+          || (editForm.get('ngay_nhap_vien').hasError('required') && editForm.get('ngay_nhap_vien').touched)">
+          Ngày Nhập Viện is required
+        </p>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Ngày Xuất Viện</label>
+        <input formControlName="ngay_xuat_vien" type="date" class="form-control">
+        <p style="color: red" class="error" *ngIf="(editForm.get('ngay_xuat_vien').hasError('pattern') && editForm.get('ngay_xuat_vien').dirty)
+          || (editForm.get('ngay_xuat_vien').hasError('required') && editForm.get('ngay_xuat_vien').touched)">
+          Ngày Xuất Viện is required
+        </p>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Lý Do Nhập Viện</label>
+        <input formControlName="ly_do_nhap_vien" type="text" class="form-control">
+        <p style="color: red" class="error" *ngIf="(editForm.get('ly_do_nhap_vien').hasError('pattern') && editForm.get('ly_do_nhap_vien').dirty)
+          || (editForm.get('ly_do_nhap_vien').hasError('required') && editForm.get('ly_do_nhap_vien').touched)">
+          Lý Do Nhập Viện is required
+        </p>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Phương Pháp Điêu Trị</label>
+        <input formControlName="phuong_phap_dieu_tri" type="text" class="form-control">
+        <p style="color: red" class="error" *ngIf="(editForm.get('phuong_phap_dieu_tri').hasError('pattern') && editForm.get('phuong_phap_dieu_tri').dirty)
+          || (editForm.get('phuong_phap_dieu_tri').hasError('required') && editForm.get('phuong_phap_dieu_tri').touched)">
+          Phương Pháp Điêu Trị is required
+        </p>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Bác Sĩ Điều Trị</label>
+        <input formControlName="bac_si_dieu_tri" type="text" class="form-control">
+        <p style="color: red" class="error" *ngIf="(editForm.get('bac_si_dieu_tri').hasError('pattern') && editForm.get('bac_si_dieu_tri').dirty)
+          || (editForm.get('bac_si_dieu_tri').hasError('required') && editForm.get('bac_si_dieu_tri').touched)">
+          Bác Sĩ Điều Trị is required
+        </p>
+
+<!--        <div class="alert alert-danger"-->
+<!--             *ngIf="editForm.get('name')?.invalid && editForm.get('name')?.touched">-->
+<!--          Customer Name is Required-->
+<!--        </div>-->
+
+      </div>
+
+<!--      <div class="form-group">-->
+<!--        <label for="exampleFormControlInput1">Customer Gender</label>-->
+<!--        <select formControlName="gender" class="form-select" id="gender">-->
+<!--          <option value="Nam">Nam</option>-->
+<!--          <option value="Nu">Nu</option>-->
+<!--        </select>-->
+<!--        <p style="color: red" class="error" *ngIf="(editForm.get('gender').hasError('pattern') && editForm.get('gender').dirty)-->
+<!--          || (editForm.get('gender').hasError('required') && editForm.get('gender').touched)">-->
+<!--          Gender is Female or Male-->
+<!--        </p>-->
+<!--      </div>-->
+      <div class="text-center m-3">
+        <button type="submit" class="btn btn-primary mr-5">
+          <span class="ml-1">Sửa </span>
+          <i class="fas fa-paper-plane"></i>
+        </button>
+        <button class="btn btn-danger ">
+          <a id="huy" routerLink="/list">
+            Trở về danh sách</a>
+          <i class="fas fa-times"></i>
+        </button>
+<!--&lt;!&ndash;        button modal&ndash;&gt;-->
+<!--        <button>-->
+<!--        <a href="#" data-toggle="modal" >-->
+<!--          <button class="btn btn-danger">Trở Về</button>-->
+<!--        </a></button>-->
+<!--&lt;!&ndash;        button modal&ndash;&gt;-->
+      </div>
+    </form>
+  </div>
+</div>
+<div class="col-2"></div>
+
+</div>
+<!--&lt;!&ndash;start modal&ndash;&gt;-->
+<!--<div class="modal fade"  tabindex="-1" role="dialog"-->
+<!--     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">-->
+<!--  <div class="modal-dialog modal-dialog-centered" role="document">-->
+<!--    <div class="modal-content">-->
+<!--      <div class="modal-header">-->
+<!--        <h5 class="modal-title" id="exampleModalLongTitle">Xác Nhận</h5>-->
+<!--        <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--          <span aria-hidden="true">&times;</span>-->
+<!--        </button>-->
+<!--      </div>-->
+<!--      <div class="modal-body">-->
+<!--        <span>Bạn Có Chắc Chắn Muốn Thoát Hay Không </span>-->
+<!--      </div>-->
+<!--      <div class="modal-footer">-->
+<!--        <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>-->
+<!--        <button type="button" class="btn btn-primary" data-dismiss="modal">-->
+<!--          <a class="text-black-50" routerLink="/list">-->
+<!--            Có-->
+<!--          </a>-->
+<!--        </button>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--&lt;!&ndash;end modal&ndash;&gt;-->
+

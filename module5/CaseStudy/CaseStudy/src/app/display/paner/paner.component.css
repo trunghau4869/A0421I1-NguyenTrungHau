@@ -1,0 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@100&family=Open+Sans:wght@300&family=Rajdhani:wght@300;600&display=swap');
+*{
+  background-color: #E0E0E0;
+}
+.title {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 72px;
+  background: -webkit-linear-gradient(45deg, #09009f, #00ff95 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

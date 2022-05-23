@@ -1,0 +1,75 @@
+<div class="row mt-4">
+  <div class="col-12">
+    <table class="table table-striped text-center" id="page">
+      <thead class="thead-light text-center">
+      <tr>
+        <th scope="col">STT</th>
+        <th scope="col">Mã Bệnh Án</th>
+        <th scope="col">Mã Bệnh Nhân</th>
+        <th scope="col">Tên Bệnh Nhân</th>
+        <th scope="col">Ngày Nhập Viện</th>
+        <th scope="col">Ngày Xuất Viện</th>
+        <th scope="col">Lý Do Nhập Viện</th>
+        <th scope="col">Phương Pháp Điều Trị</th>
+        <th scope="col">Bác Sĩ Điều Trị</th>
+        <th colspan="2" scope="col">Thao Tác</th>
+      </tr>
+      </thead>
+      <tbody>
+      <ng-container
+        *ngFor="let BenhAn of product; let i = index">
+        <tr>
+          <td>{{i + 1| number}}</td>
+          <td>{{BenhAn.id}}</td>
+          <td>{{BenhAn.ma_benh_nhan}}</td>
+          <td>{{BenhAn.ten_benh_nhan}}</td>
+          <td>{{BenhAn.ngay_nhap_vien | date :'dd-MM-yyyy'}}</td>
+          <td>{{BenhAn.ngay_xuat_vien | date :'dd-MM-yyyy'}}</td>
+          <td>{{BenhAn.ly_do_nhap_vien}}</td>
+          <td>{{BenhAn.phuong_phap_dieu_tri}}</td>
+          <td>{{BenhAn.bac_si_dieu_tri}}</td>
+          <td><a [routerLink]="'/edit/' + BenhAn.id">
+            <button class="btn btn-info"><i class="fas fa-pen" style="color: white"></i></button>
+          </a></td>
+          <td>
+            <!-- Button trigger modal -->
+            <a href="#" data-toggle="modal" [attr.data-target]="'#myModal'+ BenhAn.id">
+              <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+            </a>
+            <!-- Modal -->
+            <div class="modal fade" [id]="'myModal' + BenhAn.id" tabindex="-1" role="dialog"
+                 aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Xác Nhận</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <span>Bạn Có Muốn Xoá Thông Tin Bệnh Án {{BenhAn.id}} Hay Không </span>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">
+                      <a class="text-black-50" [routerLink]="'/delete/' + BenhAn.id">
+                        Có
+                      </a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </td>
+
+          <!-- Button trigger modal -->
+
+        </tr>
+      </ng-container>
+      </tbody>
+
+    </table>
+  </div>
+</div>

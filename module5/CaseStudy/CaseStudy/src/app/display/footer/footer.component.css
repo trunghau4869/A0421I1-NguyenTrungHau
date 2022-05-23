@@ -1,0 +1,11 @@
+.footer{
+  height: 90px;
+  background: linear-gradient(to left, #00BFA5, #A7FFEB);
+  bottom: 0;
+  /*position: fixed;*/
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: beige;
+}
